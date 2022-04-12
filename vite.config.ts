@@ -13,6 +13,7 @@ import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
+import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -27,6 +28,7 @@ export default defineConfig({
     Vue({
       include: [/\.vue$/, /\.md$/],
       reactivityTransform: true,
+      template: { transformAssetUrls },
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
@@ -79,6 +81,10 @@ export default defineConfig({
           },
         })
       },
+    }),
+
+    quasar({
+      sassVariables: 'src/quasar-variables.sass',
     }),
 
     // https://github.com/antfu/vite-plugin-pwa
