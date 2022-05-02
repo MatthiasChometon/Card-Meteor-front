@@ -23,7 +23,6 @@ specifiers:
   nprogress: ^0.2.0
   pinia: ^2.0.13
   pnpm: ^6.32.6
-  prism-theme-vars: ^0.2.2
   quasar: ^2.6.6
   sass: 1.32.0
   typescript: ^4.6.3
@@ -50,7 +49,6 @@ dependencies:
   '@vueuse/head': 0.7.5_vue@3.2.31
   nprogress: 0.2.0
   pinia: 2.0.13_typescript@4.6.3+vue@3.2.31
-  prism-theme-vars: 0.2.2
   quasar: 2.6.6
   vue: 3.2.31
   vue-demi: 0.12.5_vue@3.2.31
