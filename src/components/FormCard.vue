@@ -3,10 +3,13 @@
     <div class="col-4 col-md-6"></div>
     <div class="col-4 col-md-6">
            <div class="q-gutter-md">
+             <span >Nom de la carte</span>
       <q-input outlined v-model="text" label="Nom de la carte" style="width: 500px "/>
+      <span >Image de la carte</span>
       <q-file outlined v-model="model" style="width: 500px" label="Image de la carte">
           <q-icon name="attach_file" />
       </q-file>
+       <span >Description de la carte</span>
       <q-input
        outlined
       type="textarea"
@@ -20,8 +23,5 @@
 
       </div>
     </div>
-    <div class="col-4 col-md-6">
-          <q-btn color="BD35C9"> Proposer</q-btn>
-      </div>
   </div>
 </template>

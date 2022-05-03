@@ -10,5 +10,8 @@
      <div class="col-4">
     <FormCard/>
     </div>
+      <div class="col-4">
+    <HistoriqueUser/>
+    </div>
     </div>
 </template>
