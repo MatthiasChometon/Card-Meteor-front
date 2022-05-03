@@ -12,9 +12,14 @@
         <q-toolbar-title color="#6182C3"> Les produits </q-toolbar-title>
 
         <q-toolbar-title color="#6182C3"> Creer mon produit </q-toolbar-title>
-        <q-btn  flat color="#6182C3" >
-          <q-icon name="account_circle" class="text-purple q-gutter-md" />
-          </q-btn>
+         <q-btn
+          flat
+          dense
+          round
+          icon="account_circle"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
       </q-toolbar>
     </q-header>
 
