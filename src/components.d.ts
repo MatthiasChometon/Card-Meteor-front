@@ -6,6 +6,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Footer: typeof import('./components/Footer.vue')['default']
     FormCard: typeof import('./components/FormCard.vue')['default']
+    FormConnexio: typeof import('./components/FormConnexio.vue')['default']
+    FormLogin: typeof import('./components/FormLogin.vue')['default']
     HistoriqueUser: typeof import('./components/HistoriqueUser.vue')['default']
     Imgautil: typeof import('./components/Imgautil.vue')['default']
     MobileBar: typeof import('./components/MobileBar.vue')['default']
