@@ -1,16 +1,38 @@
-<script setup lang="ts">
-import { useQuasar } from 'quasar'
+<template>
+    <q-layout >
+      <q-footer bordered class="bg-white text-primary">
+        <q-tabs no-caps active-color="primary" indicator-color="transparent" class="text-grey" v-model="tab">
+             <div class="row">
+   <div class="col-8">
+       <q-img
+        src='../assets/Logo.png'
+        spinner-color="red"
+        style="height: 80px; max-width: 90px"
+      />
+      </div>
+       <div class="col-2">
+      <q-tab  label="© 2022 Meteor Card"    style="height: 100px; max-width: 100px"/>
+      </div>
+       <div>
+       <q-tab name="images" label="politique de confidentialité" />
+ <q-tab name="images" label="conditions" />
+ </div>
+ </div>
 
-const $q = useQuasar()
-const { t, availableLocales, locale } = useI18n()
+        </q-tabs>
+      </q-footer>
+    </q-layout>
 
-const toggleLocales = () => {
-  const locales = availableLocales
-  locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+</template>
+
+<script>
+import { ref } from 'vue'
+
+export default {
+  setup () {
+    return {
+      tab: ref('images')
+    }
+  }
 }
 </script>
-
-<template>
-  <q-btn :label="t('button.toggle_dark')" color="primary" @click="$q.dark.set(!$q.dark.isActive)" />
-  <q-btn :label="t('button.toggle_langs')" color="primary" class="q-ml-sm" @click="toggleLocales" />
-</template>
