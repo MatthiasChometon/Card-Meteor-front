@@ -1,7 +1,7 @@
 <template>
   <div style="max-width: 350px">
     <span>Listes des produit</span>
-    <q-list bordered separator>
+    <q-list bordered separator >
       <q-item>
         <q-item-section>
           <q-item-label>Carte supreme</q-item-label>

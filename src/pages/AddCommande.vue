@@ -6,7 +6,7 @@
         <q-space> </q-space>
       </div>
     </div>
-    <div class="box">
+    <div class="select">
       <div>
         <q-select
           outlined
@@ -18,6 +18,7 @@
       </div>
       <div><q-btn label="+" color="primary" @click="alert = true" /></div>
     </div>
+    <q-space></q-space>
     <div class="box">
       <div><ListesProduit /></div>
       <div><q-btn label="+" color="primary" @click="alert = true" /></div>
@@ -26,8 +27,15 @@
 </template>
 
 <style scoped>
+.select {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
 .box {
   display: flex;
   align-items: stretch;
+  max-width: 600px
+
 }
 </style>
