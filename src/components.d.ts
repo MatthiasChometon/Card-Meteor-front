@@ -5,13 +5,16 @@
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     DetailCarte: typeof import('./components/DetailCarte.vue')['default']
+    Dialog: typeof import('./components/Dialog.vue')['default']
     Filtrevalidateur: typeof import('./components/Filtrevalidateur.vue')['default']
     Filtrevisiteur: typeof import('./components/Filtrevisiteur.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
     FormCard: typeof import('./components/FormCard.vue')['default']
     FormConnexio: typeof import('./components/FormConnexio.vue')['default']
+    FormInscription: typeof import('./components/FormInscription.vue')['default']
     HistoriqueUser: typeof import('./components/HistoriqueUser.vue')['default']
     Imgautil: typeof import('./components/Imgautil.vue')['default']
+    InformationUser: typeof import('./components/InformationUser.vue')['default']
     MobileBar: typeof import('./components/MobileBar.vue')['default']
     MyCard: typeof import('./components/MyCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
