@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     HistoriqueUser: typeof import('./components/HistoriqueUser.vue')['default']
     Imgautil: typeof import('./components/Imgautil.vue')['default']
     InformationUser: typeof import('./components/InformationUser.vue')['default']
+    ListesProduit: typeof import('./components/ListesProduit.vue')['default']
     MobileBar: typeof import('./components/MobileBar.vue')['default']
     MyCard: typeof import('./components/MyCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
