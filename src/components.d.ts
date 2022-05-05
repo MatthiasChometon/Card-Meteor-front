@@ -4,6 +4,7 @@
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    DetailCarte: typeof import('./components/DetailCarte.vue')['default']
     Filtrevalidateur: typeof import('./components/Filtrevalidateur.vue')['default']
     Filtrevisiteur: typeof import('./components/Filtrevisiteur.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
@@ -12,6 +13,7 @@ declare module '@vue/runtime-core' {
     HistoriqueUser: typeof import('./components/HistoriqueUser.vue')['default']
     Imgautil: typeof import('./components/Imgautil.vue')['default']
     MobileBar: typeof import('./components/MobileBar.vue')['default']
+    MyCard: typeof import('./components/MyCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./components/Sidebar.vue')['default']

@@ -1,17 +1,16 @@
 <template>
-<div class="row">
-       <div class="col-1">
+  <div class="row">
+    <div class="col-1"></div>
+
+    <div class="col-3">
+      <Imgautil style="height: 500px; max-width: 500px" />
     </div>
 
-       <div class="col-3">
-           <Imgautil/>
+    <div class="col-4">
+      <FormCard  style="margin: 0 10px;" />
     </div>
-
-     <div class="col-4">
-    <FormCard/>
+    <div class="col-4">
+      <HistoriqueUser />
     </div>
-      <div class="col-4">
-    <HistoriqueUser/>
-    </div>
-    </div>
+  </div>
 </template>
