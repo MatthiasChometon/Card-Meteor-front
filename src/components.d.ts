@@ -4,6 +4,7 @@
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Commande: typeof import('./components/Commande.vue')['default']
     DetailCarte: typeof import('./components/DetailCarte.vue')['default']
     Dialog: typeof import('./components/Dialog.vue')['default']
     Filtrevalidateur: typeof import('./components/Filtrevalidateur.vue')['default']
