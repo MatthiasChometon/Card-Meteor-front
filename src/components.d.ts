@@ -4,9 +4,12 @@
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Carrousel: typeof import('./components/Carrousel.vue')['default']
     Commande: typeof import('./components/Commande.vue')['default']
     DetailCarte: typeof import('./components/DetailCarte.vue')['default']
     Dialog: typeof import('./components/Dialog.vue')['default']
+    FiltreProduit: typeof import('./components/FiltreProduit.vue')['default']
+    FiltreUser: typeof import('./components/FiltreUser.vue')['default']
     Filtrevalidateur: typeof import('./components/Filtrevalidateur.vue')['default']
     Filtrevisiteur: typeof import('./components/Filtrevisiteur.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
@@ -17,8 +20,10 @@ declare module '@vue/runtime-core' {
     Imgautil: typeof import('./components/Imgautil.vue')['default']
     InformationUser: typeof import('./components/InformationUser.vue')['default']
     ListesProduit: typeof import('./components/ListesProduit.vue')['default']
+    ListProduit: typeof import('./components/ListProduit.vue')['default']
     MobileBar: typeof import('./components/MobileBar.vue')['default']
     MyCard: typeof import('./components/MyCard.vue')['default']
+    Produit: typeof import('./components/Produit.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./components/Sidebar.vue')['default']
