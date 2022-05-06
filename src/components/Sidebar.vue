@@ -5,15 +5,27 @@
         <q-img
           src="../assets/Logo.png"
           spinner-color="red"
-          style="height: 80px; max-width: 90px; margin: 0 10px; padding: 1em"
+          style="height: 80px; max-width: 90px"
         />
-        <q-toolbar-title> </q-toolbar-title>
-        <q-toolbar-title color="#6182C3"> accueil </q-toolbar-title>
-        <q-toolbar-title color="#6182C3"> Les produits </q-toolbar-title>
-
-        <q-toolbar-title color="#6182C3"> Creer mon produit </q-toolbar-title>
-        <q-btn flat dense round icon="account_circle" aria-label="Menu" />
+        <q-tabs v-model="tab">
+          <q-tab name="images"  color="#6182C3"  />
+          <q-tab name="videos"   color="#6182C3" />
+          <q-tab name="articles"   color="#6182C3" />
+          <q-tab name="images"  color="#6182C3" label="Accueil" />
+           <q-tab name="articles"   color="#6182C3" />
+          <q-tab name="videos"   color="#6182C3" label="Mes produit" />
+           <q-tab name="articles"   color="#6182C3" />
+          <q-tab name="articles"   color="#6182C3" label="Creer mon produit" />
+           <q-tab name="articles"   color="#6182C3" />
+           <q-tab name="articles"   color="#6182C3" />
+           <q-tab name="articles"   color="#6182C3" />
+        </q-tabs>
+        
+        <q-btn  flat color="#6182C3" >
+          <q-icon name="account_circle" class="text-purple q-gutter-md" />
+          </q-btn>
       </q-toolbar>
     </q-header>
+
   </q-layout>
 </template>
