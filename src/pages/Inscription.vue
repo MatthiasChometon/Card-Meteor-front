@@ -9,14 +9,13 @@ const isDisplay: bool= ref(false);
     <q-card style="height: 500px; width: 900px" class="q-px-sm q-pb-md">
         <div class="col-6">
           <q-card-section>
-            <div class="text-h6">S'inscrire</div>
+            <div class="text-h6" align="center" justify="center">S'inscrire</div>
           </q-card-section>
         </div>
 
-        <q-separator />
-        <q-card-section>
+        <div align="center" justify="center">
           <FormInscription />
-        </q-card-section>
+          </div>
       </q-card>
     </q-dialog>
   </div>

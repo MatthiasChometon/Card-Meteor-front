@@ -29,15 +29,8 @@
           ]"
         />
       </div>
-      <div class="col">
+      <div align="center" justify="center">
         <q-btn label="Connexion" type="submit" color="primary" />
-        <q-btn
-          label="Reset"
-          type="reset"
-          color="primary"
-          flat
-          class="q-ml-sm"
-        />
       </div>
     </q-form>
   </div>
