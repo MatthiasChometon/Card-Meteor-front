@@ -1,13 +1,6 @@
 <template>
   <div class="column items-center" style="height: 10px">
     <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
-      <div class="col">
-        <q-img
-          src="../assets/Logo.png"
-          spinner-color="red"
-          style="max-width: 600px"
-        />
-      </div>
       <div class="row q-col-gutter-x-md"></div>
       <div class="col">
         <q-input

@@ -1,8 +1,12 @@
+<script setup lang="ts">
+const fruits = ['nom', 'prix', 'arcétype'];
+</script>
+
 <template>
   <div class="q-pa-md" style="max-width: 300px">
     <div class="q-gutter-md">
       <span>Trier par</span>
-      <q-select outlined v-model="model" :options="options" label="Nom" />
+      <q-select outlined :options="fruits" label="Nom" />
       <div>
         <span>Filtrer par</span>
       </div>
@@ -11,7 +15,7 @@
       <q-select
         outlined
         v-model="model"
-        :options="options"
+      :options="fruits"
         label="Tous afficher"
       />
       <span>état du produit</span>

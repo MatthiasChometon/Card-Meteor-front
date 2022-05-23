@@ -9,7 +9,6 @@
       <Produit />
       <Produit />
     </div>
-    <Carrousel />
   </dv>
 </template>
 <style lang="sass" scoped>

@@ -19,7 +19,6 @@ const isDisplay: boolean = ref(false);
           color="#6182C3"
           label="Accueil"
           size="120px"
-          
         />
         <q-spacer />
         <q-tab
@@ -80,4 +79,40 @@ const isDisplay: boolean = ref(false);
       </q-btn>
     </q-toolbar>
   </q-header>
+  <div class="q-pa-md">
+    <q-btn label="Connexion" @click="isDisplay = !isDisplay" />
+    <q-dialog v-model="isDisplay">
+      <q-card
+        style="height: 500px; width: 10000px; margin: 0 auto"
+        class="q-px-sm q-pb-md"
+      >
+        <div class="col-6">
+          <q-card-section>
+            <div
+              class="text-h6"
+              align="center"
+              justify="center"
+              style=" margin-left: auto;
+    margin-right: auto "
+            >
+              Se connecter
+              <q-btn
+                style="float: right"
+                flat
+                color="#6182C3"
+                @click="isDisplay = false"
+              >
+                <q-icon name="close" class="text-purple q-gutter-md"
+              /></q-btn>
+            </div>
+          </q-card-section>
+        </div>
+
+        <q-card-section style="margin: 0 auto">
+          <FormConnexio style=" margin-left: auto;
+    margin-right: auto "/>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
+  </div>
 </template>
