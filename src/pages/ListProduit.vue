@@ -21,7 +21,7 @@ margin-right: 10%;max-width: 500px
   
       <Produit  style="
 margin-right: 10%;
-" />/>
+" />
    
     </div>
      <div class="q-pa-lg flex flex-center">

@@ -26,7 +26,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./components/Sidebar.vue')['default']
-    'SiebarConnecté': typeof import('./components/SiebarConnecté.vue')['default']
   }
 }
 
