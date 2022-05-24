@@ -1,6 +1,21 @@
 <template>
   <div class="column items-center" style="height: 10px">
     <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+     <div class="col-6">
+          <q-card-section>
+            <div
+              class="text-h6"
+              align="center"
+              justify="center"
+              style=" margin-left: auto;
+    margin-right: auto "
+            >
+              Se connecter
+           
+              
+            </div>
+          </q-card-section>
+        </div>
       <div class="row q-col-gutter-x-md"></div>
       <div class="col">
         <q-input
@@ -8,6 +23,7 @@
           v-model="name"
           label="Votre email*"
           lazy-rules
+           style="outline-color::#6182c3"
           :rules="[(val) => (val && val.length > 0) || 'Please type something']"
         />
 
@@ -23,8 +39,9 @@
         />
       </div>
       <div align="center" justify="center">
-        <q-btn label="Connexion" type="submit" color="primary" />
+        <q-btn label="Connexion" type="submit" style="background:#6182c3" />
       </div>
     </q-form>
+
   </div>
 </template>

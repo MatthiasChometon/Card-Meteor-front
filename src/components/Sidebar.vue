@@ -79,7 +79,7 @@ const isDisplay: boolean = ref(false);
       </q-btn>
     </q-toolbar>
   </q-header>
-  <div class="q-pa-md">
+  <div class="q-pa-md" >
     <q-btn label="Connexion" @click="isDisplay = !isDisplay" />
     <q-dialog v-model="isDisplay">
       <q-card
@@ -95,7 +95,7 @@ const isDisplay: boolean = ref(false);
               style=" margin-left: auto;
     margin-right: auto "
             >
-              Se connecter
+
               <q-btn
                 style="float: right"
                 flat
