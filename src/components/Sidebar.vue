@@ -21,7 +21,8 @@ const isDisplay: boolean = ref(false);
           size="120px"
         />
         <q-spacer />
-        <q-tab
+       <q-route-tab
+         to="/ListProduit"
           align="center"
           justify="center"
           name="videos"
