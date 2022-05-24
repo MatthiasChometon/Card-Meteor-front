@@ -30,45 +30,25 @@ const isDisplay: boolean = ref(false);
           size="30px"
         />
         <q-spacer />
-        <q-btn flat color="#6182C3" label="créer mon produit">
+        <q-btn flat color="#6182C3" label="créer mon produit" style="width: 280px;">
           <q-menu fit>
             <q-list style="min-width: 100px">
-              <q-item clickable>
-                <q-route-tab
-                  to="/CreateCard"
-                  align="center"
-                  justify="center"
-                  name="images"
-                  color="#6182C3"
-                  label="Carte"
-                  size="120px"
-                  style="grid-template-columns: 1fr 1fr 1fr"
-                />
-              </q-item>
-              <q-separator />
-              <q-item clickable>
-                <q-route-tab
-                  to="/CreateDect"
-                  align="center"
-                  justify="center"
-                  name="videos"
-                  color="#6182C3"
-                  label="Dect"
-                  size="30px"
-                />
-              </q-item>
-              <q-separator />
-              <q-item clickable>
-                <q-tab
-                  align="center"
-                  justify="center"
-                  name="videos"
-                  color="#6182C3"
-                  label="Box"
-                />
-              </q-item>
-              <q-separator />
-            </q-list>
+            <q-item clickable>
+              <q-item-section  align="center"
+                  justify="center" @click="$router.replace('/CreateCard')">Carte</q-item-section>
+            </q-item>
+                 <q-separator />
+            <q-item clickable>
+              <q-item-section  align="center"
+                  justify="center">Dect</q-item-section>
+            </q-item>
+            <q-separator />
+            <q-item clickable>
+              <q-item-section  align="center"
+                  justify="center">Box</q-item-section>
+            </q-item>
+
+          </q-list>
           </q-menu>
         </q-btn>
       </q-tabs>

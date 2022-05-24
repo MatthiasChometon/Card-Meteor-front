@@ -20,6 +20,6 @@
       </div>
   </div>
   <div align="center" justify="center">
-    <q-btn a size="22px" class="q-px-xl q-py-xs">S'inscrire</q-btn>
+    <q-btn a size="22px" class="q-px-xl q-py-xs" style="background:#6182c3">S'inscrire</q-btn>
   </div>
 </template>

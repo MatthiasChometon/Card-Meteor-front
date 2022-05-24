@@ -1,21 +1,21 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md">
+  <div >
     <q-card class="my-card" flat bordered>
       <q-img src="../assets/Card.png" />
 
       <q-card-section>
         <div class="text-overline text-orange-9"></div>
-        <div class="text-h5 q-mt-sm q-mb-xs">Uria</div>
+        <div class="text-h5 q-mt-sm q-mb-xs">Uria   <span style="margin-left:7%">Prix:</span></div>
         <div class="text-caption text-grey">Arcétype dangereux</div>
-        <div class="text-caption text-grey">
-          Ni Invocable Normalement ni Posable Normalement. Uniquement Invocable
-        </div>
+        <q-space></q-space>
+         <div class="text-caption text-grey"><q-btn style="margin-top:7%">Detail Produit</q-btn></div>
+       
       </q-card-section>
 
       <q-card-actions>
         <q-space />
 
-        <span>Prix:</span>
+      
       </q-card-actions>
 
       <q-slide-transition>
@@ -33,6 +33,5 @@
 
 <style lang="sass" scoped>
 .my-card
-    width: 100%
-    max-width: 350px
+  max-width: 10000px
 </style>
