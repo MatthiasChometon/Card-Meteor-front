@@ -16,8 +16,10 @@ declare module '@vue/runtime-core' {
     FormInscription: typeof import('./components/FormInscription.vue')['default']
     HistoriqueUser: typeof import('./components/HistoriqueUser.vue')['default']
     Imgautil: typeof import('./components/Imgautil.vue')['default']
+    InformationCommande: typeof import('./components/InformationCommande.vue')['default']
     InformationUser: typeof import('./components/InformationUser.vue')['default']
     ListCard: typeof import('./components/ListCard.vue')['default']
+    ListeProduit: typeof import('./components/ListeProduit.vue')['default']
     ListesProduit: typeof import('./components/ListesProduit.vue')['default']
     MobileBar: typeof import('./components/MobileBar.vue')['default']
     MyCard: typeof import('./components/MyCard.vue')['default']
@@ -26,6 +28,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./components/Sidebar.vue')['default']
+    SideBarconnected: typeof import('./components/SideBarconnected.vue')['default']
   }
 }
 
