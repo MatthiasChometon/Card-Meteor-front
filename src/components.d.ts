@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     Imgautil: typeof import('./components/Imgautil.vue')['default']
     InformationCommande: typeof import('./components/InformationCommande.vue')['default']
     InformationUser: typeof import('./components/InformationUser.vue')['default']
+    LanguageButton: typeof import('./components/SwitchDarkMode .vue')['default']
     ListCard: typeof import('./components/ListCard.vue')['default']
     ListeProduit: typeof import('./components/ListeProduit.vue')['default']
     ListesProduit: typeof import('./components/ListesProduit.vue')['default']
@@ -28,8 +29,8 @@ declare module '@vue/runtime-core' {
     Produit2: typeof import('./components/Produit2.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Sidebar: typeof import('./components/Sidebar.vue')['default']
-    SideBarconnected: typeof import('./components/SideBarconnected.vue')['default']
+    SwitchDarkMode: typeof import('./components/layout/buttons/SwitchDarkMode.vue')['default']
+    SwitchLanguageButton: typeof import('./components/layout/buttons/SwitchLanguageButton.vue')['default']
   }
 }
 
