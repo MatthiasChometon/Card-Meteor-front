@@ -25,8 +25,6 @@ declare module '@vue/runtime-core' {
     MyCard: typeof import('./components/MyCard.vue')['default']
     Produit: typeof import('./components/Produit.vue')['default']
     Produit2: typeof import('./components/Produit2.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./components/Sidebar.vue')['default']
     SideBarconnected: typeof import('./components/SideBarconnected.vue')['default']
   }

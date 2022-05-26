@@ -55,7 +55,7 @@ const isDisplay: boolean = ref(false);
       </q-tabs>
       <q-space />
 
-      <q-btn flat color="#6182C3" size="30px" @click="isDisplay = true">
+      <q-btn flat color="#6182C3" size="30px" @click="isDisplay = true ;$router.replace('/DetailCompte')" >
         <q-icon name="account_circle" />
       </q-btn>
       <q-btn flat color="#6182C3" size="30px" @click="isDisplay = true">

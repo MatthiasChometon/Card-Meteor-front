@@ -48,7 +48,6 @@ const isDisplay: boolean = ref(false);
               <q-item-section  align="center"
                   justify="center">Box</q-item-section>
             </q-item>
-
           </q-list>
           </q-menu>
         </q-btn>
@@ -76,15 +75,13 @@ const isDisplay: boolean = ref(false);
               style=" margin-left: auto;
     margin-right: auto "
             >
-
               <q-btn
                 style="float: right"
                 flat
                 color="#6182C3"
                 @click="isDisplay = false"
               >
-                <q-icon name="close" class="text-purple q-gutter-md"
-              /></q-btn>
+                <q-icon name="close" /></q-btn>
             </div>
           </q-card-section>
         </div>
