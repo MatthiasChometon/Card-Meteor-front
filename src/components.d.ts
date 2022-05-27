@@ -4,11 +4,33 @@
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Counter: typeof import('./components/Counter.vue')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
-    Form: typeof import('./components/Form.vue')['default']
+    Commande: typeof import('./components/Commande.vue')['default']
+    DetailCarte: typeof import('./components/DetailCarte.vue')['default']
+    Dialog: typeof import('./components/Dialog.vue')['default']
+    FiltreUser: typeof import('./components/FiltreUser.vue')['default']
+    Filtrevalidateur: typeof import('./components/Filtrevalidateur.vue')['default']
+    Filtrevisiteur: typeof import('./components/Filtrevisiteur.vue')['default']
+    Footer: typeof import('./components/layout/Footer.vue')['default']
+    FormCard: typeof import('./components/FormCard.vue')['default']
+    FormConnexio: typeof import('./components/FormConnexio.vue')['default']
+    FormInscription: typeof import('./components/FormInscription.vue')['default']
+    HistoriqueUser: typeof import('./components/HistoriqueUser.vue')['default']
+    Imgautil: typeof import('./components/Imgautil.vue')['default']
+    InformationCommande: typeof import('./components/InformationCommande.vue')['default']
+    InformationUser: typeof import('./components/InformationUser.vue')['default']
+    LanguageButton: typeof import('./components/SwitchDarkMode .vue')['default']
+    ListCard: typeof import('./components/ListCard.vue')['default']
+    ListeProduit: typeof import('./components/ListeProduit.vue')['default']
+    ListesProduit: typeof import('./components/ListesProduit.vue')['default']
+    MobileBar: typeof import('./components/MobileBar.vue')['default']
+    MyCard: typeof import('./components/MyCard.vue')['default']
+    Navbar: typeof import('./components/layout/Navbar.vue')['default']
+    Produit: typeof import('./components/Produit.vue')['default']
+    Produit2: typeof import('./components/Produit2.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SwitchDarkMode: typeof import('./components/layout/buttons/SwitchDarkMode.vue')['default']
+    SwitchLanguageButton: typeof import('./components/layout/buttons/SwitchLanguageButton.vue')['default']
   }
 }
 
