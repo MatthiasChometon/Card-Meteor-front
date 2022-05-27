@@ -1,49 +1,104 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t } = useI18n();
+const isDisplay: boolean = ref(false);
 
 const links: {
-  page: string
-  text: string
+  page: string;
+  text: string;
 }[] = $ref([
   {
-    page: '',
-    text: 'navbar.homepage',
+    page: "/",
+    text: "navbar.homepage",
   },
   {
-    page: '',
-    text: 'navbar.products',
+    page: "/ListProduit",
+    text: "navbar.products",
   },
   {
-    page: '',
-    text: 'navbar.createMyProduct',
+    page: "",
+    text: "navbar.createMyProduct",
   },
-])
-
+]);
 </script>
 
 <template>
   <q-header elevated class="bg-white flex">
-    <div style="flex: 1;" class="q-pa-md q-pl-md">
+    <div style="flex: 1" class="q-pa-md q-pl-md">
       <q-img
-        src="../../assets/meteor-card-icon-with-text.png" spinner-color="white" style="width: 80px;"
+        src="../../assets/meteor-card-icon-with-text.png"
+        spinner-color="white"
+        style="width: 80px"
         fit="contain"
       />
     </div>
-    <div style="flex: 2;" class="flex justify-center content-center">
+    <div
+      style="flex: 2"
+      class="flex justify-center content-center"
+      v-for="link in links"
+      :key="link.text"
+    >
       <router-link
-        v-for="link in links" :key="link.text" :to="link.page" replace
         class="text-h6 q-pa-md q-px-md text-primary"
+        replace
+        :to="link.page"
       >
         {{ t(link.text) }}
       </router-link>
     </div>
-    <div style="flex: 1;" class="flex justify-end items-center no-wrap">
+    <div style="flex: 1" class="flex justify-end items-center no-wrap">
       <SwitchDarkMode />
       <SwitchLanguageButton />
-      <q-icon color="primary" size="40px" name="account_circle" class="q-px-md" />
-      <q-icon color="primary" size="40px" name="shopping_cart" class="q-px-md" />
+      <q-btn flat @click="isDisplay = true">
+        <q-icon
+          color="primary"
+          size="40px"
+          name="account_circle"
+          class="q-px-md"
+        />
+      </q-btn>
+      <q-btn flat @click="$router.replace('/Panier')">
+        <q-icon
+          color="primary"
+          size="40px"
+          name="shopping_cart"
+          class="q-px-md"
+      /></q-btn>
     </div>
   </q-header>
+
+  <div class="q-pa-md">
+    <q-btn label="Connexion" @click="isDisplay = !isDisplay" />
+    <q-dialog v-model="isDisplay">
+      <q-card
+        style="height: 500px; width: 10000px; margin: 0 auto"
+        class="q-px-sm q-pb-md"
+      >
+        <div class="col-6">
+          <q-card-section>
+            <div
+              class="text-h6"
+              align="center"
+              justify="center"
+              style="margin-left: auto; margin-right: auto"
+            >
+              <q-btn
+                style="float: right"
+                flat
+                color="#6182C3"
+                @click="isDisplay = false"
+              >
+                <q-icon name="close"
+              /></q-btn>
+            </div>
+          </q-card-section>
+        </div>
+
+        <q-card-section style="margin: 0 auto">
+          <FormConnexion style="margin-left: auto; margin-right: auto" />
+        </q-card-section>
+      </q-card>
+    </q-dialog>
+  </div>
 </template>
 
 <style lang="scss">

@@ -41,6 +41,9 @@
       <div align="center" justify="center">
         <q-btn label="Connexion" type="submit" style="background:#6182c3" />
       </div>
+      <div>
+      <a href="http://localhost:3333/Inscription">pas encore de compte ? Inscris toi</a>
+      </div>
     </q-form>
 
   </div>
