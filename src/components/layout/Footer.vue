@@ -34,3 +34,12 @@ const links: {
     </div>
   </q-footer>
 </template>
+<style>
+  /* Applique les règles de ce bloc uniquement aux écrans >= 768px */
+  @media screen and (min-width: 768px) {
+    /* Cache les éléments avec la classe CSS q-footer */
+    .q-footer {
+      display: none;
+    }
+  }
+</style>
