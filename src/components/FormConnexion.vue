@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n()
+
+</script>
 <template>
   <div class="column items-center" style="height: 10px">
     <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
@@ -10,7 +14,7 @@
               style=" margin-left: auto;
     margin-right: auto "
             >
-              Se connecter
+              {{t(`FormConnected.Login`)}}
            
               
             </div>
@@ -19,18 +23,19 @@
       <div class="row q-col-gutter-x-md"></div>
       <div class="col">
         <q-input
-          filled
+        outlined
           v-model="name"
-          label="Votre email*"
+        :label="t(`FormConnected.mail`)"
           lazy-rules
            style="outline-color::#6182c3"
           :rules="[(val) => (val && val.length > 0) || 'Please type something']"
         />
 
         <q-input
-          filled
+     
           type="password"
-          label="Votre mot de passe*"
+          :label="t(`FormConnected.password`)"
+          outlined
           lazy-rules
           :rules="[
             (val) => (val !== null && val !== '') || 'Please type your age',
@@ -39,10 +44,10 @@
         />
       </div>
       <div align="center" justify="center">
-        <q-btn label="Connexion" type="submit" style="background:#6182c3" />
+        <q-btn type="submit" style="background:#6182c3">{{t(`FormConnected.ButtonLogin`)}}</q-btn> 
       </div>
       <div>
-      <a href="http://localhost:3333/Inscription">pas encore de compte ? Inscris toi</a>
+      <a href="http://localhost:3333/Inscription"> {{t(`FormConnected.no-account`)}}</a>
       </div>
     </q-form>
 

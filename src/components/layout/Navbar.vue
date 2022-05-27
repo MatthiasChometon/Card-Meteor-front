@@ -15,7 +15,7 @@ const links: {
     text: "navbar.products",
   },
   {
-    page: "",
+    page: "/CreateCard",
     text: "navbar.createMyProduct",
   },
 ]);
@@ -79,10 +79,10 @@ const links: {
               class="text-h6"
               align="center"
               justify="center"
-              style="margin-left: auto; margin-right: auto"
+             
             >
               <q-btn
-                style="float: right"
+             style="margin-left: 93% "
                 flat
                 color="#6182C3"
                 @click="isDisplay = false"

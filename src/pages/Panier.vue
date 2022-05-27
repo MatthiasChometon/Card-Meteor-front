@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
 <div>
 <div class="row"
@@ -14,7 +18,7 @@
  margin-top: 2%;
   margin-right:5%
 ">
-<h5 class="column items-center">My items</h5>
+<h5 class="column items-center">{{t(`ShopCar.my-items`)}}</h5>
     <div class="row" >
       <Produit style="
 margin-right: 5%;

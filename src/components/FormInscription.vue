@@ -1,25 +1,28 @@
+<script setup lang="ts">
+const { t } = useI18n()
 
+</script>
 <template>
   <div class="q-pa-md">
     <div >
         <div class="col-6">
           <q-card-section>
-            <div class="text-h6" align="center" justify="center">S'inscrire</div>
+            <div class="text-h6" align="center" justify="center">{{t(`FormRegiste.title`)}}</div>
           </q-card-section>
         </div>
-        <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="Text" placeholder="nom" />
+        <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="Text" :placeholder="t(`FormRegiste.name`)" />
 
-          <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="Text" placeholder="nom" />
-        <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="email" placeholder="Email" />
-        <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="number" placeholder="telephone"> </q-input>
+          <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="Text" :placeholder="t(`FormRegiste.first-name`)" />
+        <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="email" :placeholder="t(`FormRegiste.mail`)" />
+        <q-input  a size="22px" class="q-px-xl q-py-xs" outlined type="number" :placeholder="t(`FormRegiste.phone`)"> </q-input>
 
-        <q-input  a size="22px" class="q-px-xl q-py-xs" type="text" outlined placeholder="adresse" />
-        <q-input  a size="22px" class="q-px-xl q-py-xs" type="text" outlined placeholder="pseudo" />
-        <q-input  a size="22px" class="q-px-xl q-py-xs" type="text" outlined placeholder="Mot de passe" />
-        <q-input   a size="22px" class="q-px-xl q-py-xs" type="text" outlined placeholder="Confirmation mot de passe" />
+        <q-input  a size="22px" class="q-px-xl q-py-xs" type="text" outlined :placeholder="t(`FormRegiste.address`)" />
+        <q-input  a size="22px" class="q-px-xl q-py-xs" type="text" outlined :placeholder="t(`FormRegiste.pseudo`)" />
+        <q-input  a size="22px" class="q-px-xl q-py-xs" type="text" outlined :placeholder="t(`FormRegiste.password`)" />
+        <q-input   a size="22px" class="q-px-xl q-py-xs" type="text" outlined :placeholder="t(`FormRegiste.confirm-password`)" />
       </div>
   </div>
-  <div align="center" justify="center">
-    <q-btn a size="22px" class="q-px-xl q-py-xs" style="background:#6182c3">S'inscrire</q-btn>
+  <div align="center" justify="center"> 
+    <q-btn a size="22px" class="q-px-xl q-py-xs" style="background:#6182c3">{{t(`FormRegiste.button-register`)}}</q-btn>
   </div>
 </template>
