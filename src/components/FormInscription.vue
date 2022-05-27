@@ -23,6 +23,6 @@ const { t } = useI18n()
       </div>
   </div>
   <div align="center" justify="center"> 
-    <q-btn style="width: 150px">{{t(`FormRegiste.button-register`)}}</q-btn>
+    <q-btn style="width: 150px;background: linear-gradient(#BD35C9, #6182C3,#6182C3,#22B7BF)">{{t(`FormRegiste.button-register`)}}</q-btn>
   </div>
 </template>

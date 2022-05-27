@@ -44,7 +44,7 @@ const { t } = useI18n()
         />
       </div>
       <div align="center" justify="center">
-        <q-btn type="submit" style="background:#6182c3">{{t(`FormConnected.ButtonLogin`)}}</q-btn> 
+        <q-btn type="submit" style="background: linear-gradient(#BD35C9, #6182C3,#6182C3,#22B7BF)">{{t(`FormConnected.ButtonLogin`)}}</q-btn> 
       </div>
       <div>
       <a href="http://localhost:3333/Inscription" text-align: center > {{t(`FormConnected.no-account`)}}</a>
