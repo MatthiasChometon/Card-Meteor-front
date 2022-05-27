@@ -11,23 +11,25 @@ const isDisplay: bool= ref(false);
     <q-dialog v-model="isDisplay" style="height: 75px; width: 300PX;" >
     <q-card style="height: 700px; ; width: 900px" class="q-px-sm q-pb-md">
       
-                    <div
+                  <div class="col-6">
+          <q-card-section>
+            <div
               class="text-h6"
               align="center"
               justify="center"
-              style=" margin-left: auto;
-    margin-right: auto "
+             
             >
-
               <q-btn
-                style="float: right"
+             style="margin-left: 93% "
                 flat
                 color="#6182C3"
                 @click="isDisplay = false"
               >
-                <q-icon name="close" class="text-purple q-gutter-md"
+                <q-icon name="close"
               /></q-btn>
             </div>
+          </q-card-section>
+        </div>
 
         <div align="center" justify="center">
           <FormInscription />

@@ -23,6 +23,6 @@ const { t } = useI18n()
       </div>
   </div>
   <div align="center" justify="center"> 
-    <q-btn a size="22px" class="q-px-xl q-py-xs" style="background:#6182c3">{{t(`FormRegiste.button-register`)}}</q-btn>
+    <q-btn style="width: 150px">{{t(`FormRegiste.button-register`)}}</q-btn>
   </div>
 </template>

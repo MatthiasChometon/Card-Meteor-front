@@ -3,7 +3,7 @@ const { t } = useI18n()
 
 </script>
 <template>
-  <div class="column items-center" style="height: 10px">
+  <div class="q-pa-md">
     <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
      <div class="col-6">
           <q-card-section>
@@ -47,7 +47,7 @@ const { t } = useI18n()
         <q-btn type="submit" style="background:#6182c3">{{t(`FormConnected.ButtonLogin`)}}</q-btn> 
       </div>
       <div>
-      <a href="http://localhost:3333/Inscription"> {{t(`FormConnected.no-account`)}}</a>
+      <a href="http://localhost:3333/Inscription" text-align: center > {{t(`FormConnected.no-account`)}}</a>
       </div>
     </q-form>
 
