@@ -17,7 +17,7 @@ margin-right: 10%;
 
       <Produit style="
 margin-right: 10%;max-width: 500px
-" /> />
+" /> 
   
       <Produit  style="
 margin-right: 10%;

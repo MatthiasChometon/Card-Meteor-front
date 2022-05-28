@@ -1,22 +1,22 @@
 <script setup lang="ts">
 const { t } = useI18n();
-const isDisplay: boolean = $ref(false)
+const isDisplay: boolean = $ref(false);
 
 const links: {
-  page: string
-  text: string
+  page: string;
+  text: string;
 }[] = $ref([
   {
-    page: '/',
-    text: 'navbar.homepage',
+    page: "/",
+    text: "navbar.homepage",
   },
   {
-    page: '/ListProduit',
-    text: 'navbar.products',
+    page: "/ListProduit",
+    text: "navbar.products",
   },
   {
-    page: '/CreateCard',
-    text: 'navbar.createMyProduct',
+    page: "/CreateCard",
+    text: "navbar.createMyProduct",
   },
 ]);
 </script>
@@ -24,33 +24,55 @@ const links: {
 <template>
   <q-header elevated class="bg-white flex">
     <div style="flex: 1" class="q-pa-md q-pl-md">
-       <q-btn flat @click="$router.replace('/Panier')">
+      <q-btn flat>
         <q-icon
           color="primary"
           size="40px"
           name="density_medium"
           class="q-px-md"
-          style="right: 20px;"
-      /></q-btn>
+          style="right: 20px"
+        />
+        <q-menu fit>
+          <q-list style="min-width: 100px">
+            <q-item clickable>
+              <q-item-section
+                align="center"
+                justify="center"
+                @click="$router.replace('/CreateCard')"
+                >Carte</q-item-section
+              >
+            </q-item>
+            <q-separator />
+            <q-item clickable>
+              <q-item-section align="center" justify="center"
+                >Dect</q-item-section
+              >
+            </q-item>
+            <q-separator />
+            <q-item clickable>
+              <q-item-section align="center" justify="center"
+                >Box</q-item-section
+              >
+            </q-item>
+          </q-list>
+        </q-menu></q-btn
+      >
     </div>
-    <div
-      style="flex: 6"
-    >
+    <div style="flex: 6">
       <q-img
         src="../../assets/meteor-card-icon-with-text.png"
         spinner-color="white"
-        style="width: 80px; left: 20px;"
+        style="width: 80px; left: 20px"
         fit="contain"
-        
       />
-  
+
       <q-btn flat @click="isDisplay = true">
         <q-icon
           color="primary"
           size="40px"
           name="account_circle"
           class="q-px-md"
-          style="left: 80px;"
+          style="left: 80px"
         />
       </q-btn>
     </div>
@@ -71,7 +93,8 @@ const links: {
                 color="#6182C3"
                 @click="isDisplay = false"
               >
-                <q-icon name="close" /></q-btn>
+                <q-icon name="close"
+              /></q-btn>
             </div>
           </q-card-section>
         </div>
