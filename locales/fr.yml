@@ -5,4 +5,23 @@ navbar:
 footer:
   privacyPolicy: politique de confidentialité
   conditions: conditions
+product:
+  orderBy:
+    label: trier par
+    type:
+      updateDate: date de sortie
+      name: nom du produit
+  filterBy:
+    label: filtrer par
+    type:
+      card: carte
+    search: rechercher un produit
+    user: uniquement mes produits
+    step:
+      label: filtrer par étape du produit
+      type:
+        0: en cours de création
+        1: en cours de validation
+        2: publié
+
 not-found: Page non trouvée
