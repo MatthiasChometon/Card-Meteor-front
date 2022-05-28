@@ -1,9 +1,9 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { useConnectedUser } from '../users/connected'
 import { Direction } from '~/enums/products/filter/Direction'
-import type { Pagination } from '~/enums/products/filter/Pagination'
-import type { ProductListFilter } from '~/enums/products/filter/ProductListFilter'
 import { ProductOrderBy } from '~/enums/products/filter/ProductOrderBy'
+import type { ProductListFilter } from '~/types/product/filter/ProductListFilter'
+import type { Pagination } from '~/types/product/filter/Pagination'
 
 export const useProductListFilter = defineStore('productListFilter', () => {
   const { connectedUser } = useConnectedUser()
