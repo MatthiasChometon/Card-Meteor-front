@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     Filtrevalidateur: typeof import('./components/Filtrevalidateur.vue')['default']
     Filtrevisiteur: typeof import('./components/Filtrevisiteur.vue')['default']
     Footer: typeof import('./components/layout/Footer.vue')['default']
+    FooterMobile: typeof import('./components/layout/FooterMobile.vue')['default']
     FormCard: typeof import('./components/FormCard.vue')['default']
     FormConnexion: typeof import('./components/FormConnexion.vue')['default']
     FormInscription: typeof import('./components/FormInscription.vue')['default']

@@ -1,22 +1,22 @@
 <script setup lang="ts">
 const { t } = useI18n();
-const isDisplay: boolean = ref(false);
+const isDisplay: boolean = $ref(false)
 
 const links: {
-  page: string;
-  text: string;
+  page: string
+  text: string
 }[] = $ref([
   {
-    page: "/",
-    text: "navbar.homepage",
+    page: '/',
+    text: 'navbar.homepage',
   },
   {
-    page: "/ListProduit",
-    text: "navbar.products",
+    page: '/ListProduit',
+    text: 'navbar.products',
   },
   {
-    page: "/CreateCard",
-    text: "navbar.createMyProduct",
+    page: '/CreateCard',
+    text: 'navbar.createMyProduct',
   },
 ]);
 </script>
@@ -67,7 +67,6 @@ const links: {
   </q-header>
 
   <div class="q-pa-md">
-    <q-btn label="Connexion" @click="isDisplay = !isDisplay" />
     <q-dialog v-model="isDisplay">
       <q-card
         style="height: 500px; width: 10000px; margin: 0 auto"
@@ -75,20 +74,14 @@ const links: {
       >
         <div class="col-6">
           <q-card-section>
-            <div
-              class="text-h6"
-              align="center"
-              justify="center"
-             
-            >
+            <div class="text-h6" align="center" justify="center">
               <q-btn
-             style="margin-left: 93% "
+                style="margin-left: 93%"
                 flat
                 color="#6182C3"
                 @click="isDisplay = false"
               >
-                <q-icon name="close"
-              /></q-btn>
+                <q-icon name="close" /></q-btn>
             </div>
           </q-card-section>
         </div>
