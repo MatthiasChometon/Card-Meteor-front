@@ -1,12 +1,13 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { useConnectedUser } from '../users/connected'
+import { useProductPagination } from './pagination'
 import { Direction } from '~/enums/products/filter/Direction'
 import { ProductOrderBy } from '~/enums/products/filter/ProductOrderBy'
 import type { ProductListFilter } from '~/types/product/filter/ProductListFilter'
-import type { Pagination } from '~/types/product/filter/Pagination'
 
 export const useProductListFilter = defineStore('productListFilter', () => {
   const { connectedUser } = useConnectedUser()
+  const { paginationParam } = useProductPagination()
 
   const productListFilter: ProductListFilter = $ref({
     orderBy: {
@@ -16,12 +17,17 @@ export const useProductListFilter = defineStore('productListFilter', () => {
     filterBy: {
       name: '',
       step: 2,
+      pagination: {
+        start: paginationParam.start,
+        end: paginationParam.end,
+      },
     },
   })
 
-  function setPagination(pagination: Pagination) {
-    productListFilter.filterBy.pagination = pagination
-  }
+  watch(paginationParam, () => {
+    const { start, end } = paginationParam
+    productListFilter.filterBy.pagination = { start, end }
+  })
 
   function setStep(step?: number) {
     productListFilter.filterBy.step = step
@@ -55,7 +61,6 @@ export const useProductListFilter = defineStore('productListFilter', () => {
     setFilterName,
     setOrderName,
     setStep,
-    setPagination,
     productListFilter,
   }
 })
