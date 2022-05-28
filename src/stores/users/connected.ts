@@ -1,6 +1,6 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { UserRoles } from '../../enums/users/UserRoles'
-import type { ConnectedUser } from '~/enums/users/ConnectedUser'
+import type { ConnectedUser } from '~/types/user/ConnectedUser'
 
 export const useConnectedUser = defineStore('connectedUser', () => {
   let connectedUser: ConnectedUser | undefined = $ref()
