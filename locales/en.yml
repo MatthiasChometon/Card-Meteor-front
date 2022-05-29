@@ -5,6 +5,24 @@ navbar:
 footer:
   privacyPolicy: privacy policy
   conditions: conditions
+product:
+  orderBy:
+    label: order by
+    type:
+      updateDate: release date
+      name: product name
+  filterBy:
+    label: filter by
+    type:
+      card: card
+    search: search product
+    user: only my products
+    step:
+      label: filter by product step
+      type:
+        0: being created
+        1: being validated
+        2: released
 not-found: Not found
 ShopCar:
  my-items: My items
