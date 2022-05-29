@@ -12,5 +12,5 @@ const direction = $computed({
 </script>
 
 <template>
-  <q-btn v-model="direction" style="width: 60px; height: 60px;" flat class="flex justify-center items-center" color="grey" icon="arrow_upward" />
+  <q-btn v-model="direction" round size="16px" flat class="flex justify-center items-center" color="grey" icon="arrow_upward" />
 </template>

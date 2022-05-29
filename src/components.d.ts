@@ -32,7 +32,6 @@ declare module '@vue/runtime-core' {
     ProductSearchFilter: typeof import('./components/products/filterBy/ProductSearchFilter.vue')['default']
     ProductStepFilter: typeof import('./components/products/filterBy/ProductStepFilter.vue')['default']
     ProductTypeOrder: typeof import('./components/products/orderBy/ProductTypeOrder.vue')['default']
-    Produit: typeof import('./components/Produit.vue')['default']
     Produit2: typeof import('./components/Produit2.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

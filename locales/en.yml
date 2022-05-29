@@ -10,7 +10,7 @@ product:
     label: order by
     type:
       updateDate: release date
-      name: nom du produit
+      name: product name
   filterBy:
     label: filter by
     type:
