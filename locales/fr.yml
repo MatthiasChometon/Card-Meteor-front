@@ -25,29 +25,30 @@ product:
         2: publié
 
 not-found: Page non trouvée
-ShopCar:
- my-items: Mes articles
+shoppingBasket:
+ myItems: Mes articles
  payment: Payement
- finalize-order: finaliser ma commande
- my-articles: Mes articles
+ finalizeOrder: finaliser ma commande
+ myArticles: Mes articles
  Delevery: livraison
  Validate: Valider
 
-FormConnected:
- Login: Se connecter 
- no-account: pas encore de compte ? Inscris toi 
- ButtonLogin: Connexion
- mail: email
- password: Mot de passe
+Form:
+ Login:
+  Login: Se connecter 
+  no-account: pas encore de compte ? Inscris toi 
+  ButtonLogin: Connexion
+  mail: email
+  password: Mot de passe
 
-FormRegiste:
- title: S'inscrire
- name: nom
- first-name: prenom
- mail: email
- phone: telephone
- address: addresse
- pseudo: pseudo
- password: mot de passe
- confirm-password: confirmation du mot de passe
- button-register: S'inscrire
+ Register:
+  title: S'inscrire
+  name: nom
+  firstName: prenom
+  mail: email
+  phone: telephone
+  address: addresse
+  pseudo: pseudo
+  password: mot de passe
+  confirmPassword: confirmation du mot de passe
+  buttonRegiste: S'inscrire

@@ -24,29 +24,31 @@ product:
         1: being validated
         2: released
 not-found: Not found
-ShopCar:
- my-items: My items
+shoppingBasket:
+ myItems: My items
  payment: Payment
- finalize-order: finalize my order
- my-articles: my articles
+ finalizeOrder: finalize my order
+ myArticles: my articles
  Delevery: Delevery
  Validate: Validate
 
-FormConnected:
- Login: Login  
- no-account: no account yet? register yourself
- ButtonLogin: Login
- mail: mail
- password: password
+Form:
+ Login:
+  Login: Login  
+  no-account: no account yet? register yourself
+  ButtonLogin: Login
+  mail: mail
+  password: password
 
-FormRegiste:
- title: Register
- name: name
- first-name: first name
- mail: mail
- phone: phone
- address: address
- pseudo: pseudo
- password: password
- confirm-password: Password Confirmation
- button-register: Register
+
+ Register:
+  title: Register
+  name: name
+  firstName: first name
+  mail: mail
+  phone: phone
+  address: address
+  pseudo: pseudo
+  password: password
+  confirmPassword: Password Confirmation
+  buttonRegiste: Register

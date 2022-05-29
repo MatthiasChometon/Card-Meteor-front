@@ -19,7 +19,7 @@ const { t } = useI18n();
           margin-right: 5%;
         "
       >
-        <h5 class="column items-center">{{ t(`ShopCar.my-items`) }}</h5>
+        <h5 class="column items-center">{{ t(`shoppingBasket.myItems`) }}</h5>
         <div class="row">
           <Produit style="margin-right: 5%" />
 

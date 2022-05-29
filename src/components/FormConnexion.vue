@@ -12,7 +12,7 @@ const { t } = useI18n()
             justify="center"
             style="margin-left: auto; margin-right: auto"
           >
-            {{ t(`FormConnected.Login`) }}
+            {{ t(`Form.Login.Login`) }}
           </div>
         </q-card-section>
       </div>
@@ -20,14 +20,14 @@ const { t } = useI18n()
       <div class="col">
         <q-input
           outlined
-          :label="t(`FormConnected.mail`)"
+          :label="t(`Form.Login.mail`)"
           lazy-rules
           style="outline-color::#6182c3"
           :rules="[(val) => (val && val.length > 0) || 'Please type something']"
         />
 
         <q-input
-          :label="t(`FormConnected.password`)"
+          :label="t(`Form.Login.password`)"
           outlined
           lazy-rules
           :rules="[
@@ -43,12 +43,12 @@ const { t } = useI18n()
             background: linear-gradient(#bd35c9, #6182c3, #6182c3, #22b7bf);
           "
         >
-          {{ t(`FormConnected.ButtonLogin`) }}
+          {{ t(`Form.Login.ButtonLogin`) }}
         </q-btn>
       </div>
       <div>
         <a href="http://localhost:3333/Inscription" text-align: center>
-          {{ t(`FormConnected.no-account`) }}</a>
+          {{ t(`Form.Login.no-account`) }}</a>
       </div>
     </q-form>
   </div>
