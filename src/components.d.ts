@@ -4,6 +4,7 @@
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AccountButton: typeof import('./components/layout/navbar/AccountButton.vue')['default']
     Commande: typeof import('./components/Commande.vue')['default']
     DetailCarte: typeof import('./components/DetailCarte.vue')['default']
     Dialog: typeof import('./components/Dialog.vue')['default']
@@ -23,7 +24,10 @@ declare module '@vue/runtime-core' {
     ListesProduit: typeof import('./components/ListesProduit.vue')['default']
     MobileBar: typeof import('./components/MobileBar.vue')['default']
     MyCard: typeof import('./components/MyCard.vue')['default']
-    Navbar: typeof import('./components/layout/Navbar.vue')['default']
+    Navbar: typeof import('./components/layout/navbar/Navbar.vue')['default']
+    NavbarIcon: typeof import('./components/layout/navbar/NavbarIcon.vue')['default']
+    NavbarLinks: typeof import('./components/layout/navbar/NavbarLinks.vue')['default']
+    NavbarOptions: typeof import('./components/layout/navbar/NavbarOptions.vue')['default']
     ProductCard: typeof import('./components/products/ProductCard.vue')['default']
     ProductDirectionOrder: typeof import('./components/products/orderBy/ProductDirectionOrder.vue')['default']
     ProductFilter: typeof import('./components/products/ProductFilter.vue')['default']
@@ -33,6 +37,9 @@ declare module '@vue/runtime-core' {
     ProductStepFilter: typeof import('./components/products/filterBy/ProductStepFilter.vue')['default']
     ProductTypeOrder: typeof import('./components/products/orderBy/ProductTypeOrder.vue')['default']
     Produit2: typeof import('./components/Produit2.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    ShoppingButton: typeof import('./components/layout/navbar/ShoppingButton.vue')['default']
     SwitchDarkMode: typeof import('./components/layout/buttons/SwitchDarkMode.vue')['default']
     SwitchLanguageButton: typeof import('./components/layout/buttons/SwitchLanguageButton.vue')['default']
     UserProductFilter: typeof import('./components/products/filterBy/UserProductFilter.vue')['default']
