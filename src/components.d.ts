@@ -36,8 +36,6 @@ declare module '@vue/runtime-core' {
     ProductTypeOrder: typeof import('./components/products/orderBy/ProductTypeOrder.vue')['default']
     Produit: typeof import('./components/Produit.vue')['default']
     Produit2: typeof import('./components/Produit2.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     SwitchDarkMode: typeof import('./components/layout/buttons/SwitchDarkMode.vue')['default']
     SwitchLanguageButton: typeof import('./components/layout/buttons/SwitchLanguageButton.vue')['default']
     UserProductFilter: typeof import('./components/products/filterBy/UserProductFilter.vue')['default']

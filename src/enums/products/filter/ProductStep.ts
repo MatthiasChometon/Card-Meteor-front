@@ -1,5 +1,5 @@
-export enum ProductStep {
-  'beingCreated' = '0',
-  'beingValidated' = '1',
-  'released' = '2',
+export const ProductStep = {
+  beingCreated: 1,
+  beingValidated: 2,
+  released: 3,
 }
