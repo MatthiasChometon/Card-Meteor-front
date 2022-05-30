@@ -46,10 +46,6 @@ const { t } = useI18n()
           {{ t(`Form.Login.ButtonLogin`) }}
         </q-btn>
       </div>
-      <div>
-        <a href="http://localhost:3333/Inscription" text-align: center>
-          {{ t(`Form.Login.no-account`) }}</a>
-      </div>
     </q-form>
   </div>
 </template>

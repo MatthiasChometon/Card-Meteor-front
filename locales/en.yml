@@ -52,3 +52,4 @@ Form:
   password: password
   confirmPassword: Password Confirmation
   buttonRegiste: Register
+  haveAccount: already have an account? Connect yourself

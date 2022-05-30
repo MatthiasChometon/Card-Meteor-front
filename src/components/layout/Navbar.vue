@@ -73,14 +73,7 @@ const links: {
         <SwitchDarkMode />
         <SwitchLanguageButton />
       </div>
-      <q-btn flat @click="isDisplay = true">
-        <q-icon
-          color="primary"
-          size="40px"
-          name="account_circle"
-          class="q-px-md"
-        />
-      </q-btn>
+      <Dialog />
       <div class="Navebar">
         <q-btn flat @click="$router.replace('/Panier')">
           <q-icon
@@ -93,33 +86,7 @@ const links: {
     </div>
   </q-header>
 
-  <div class="q-pa-md">
-    <q-dialog v-model="isDisplay">
-      <q-card
-        style="height: 500px; width: 10000px; margin: 0 auto"
-        class="q-px-sm q-pb-md"
-      >
-        <div class="col-6">
-          <q-card-section>
-            <div class="text-h6" align="center" justify="center">
-              <q-btn
-                style="margin-left: 93%"
-                flat
-                color="#6182C3"
-                @click="isDisplay = false"
-              >
-                <q-icon name="close"
-              /></q-btn>
-            </div>
-          </q-card-section>
-        </div>
-
-        <q-card-section style="margin: 0 auto">
-          <FormConnexion style="margin-left: auto; margin-right: auto" />
-        </q-card-section>
-      </q-card>
-    </q-dialog>
-  </div>
+  
 </template>
 
 <style lang="scss">
