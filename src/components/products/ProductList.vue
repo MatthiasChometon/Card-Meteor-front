@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
   <ProductFilter />
   <div class="flex full-width">
-    <ProductCard v-for="product in props.products" :key="product.id" class="productCard" :product="product" />
+    <ProductCard v-for="product in props.products" :key="product.id" class="product-card" :product="product" />
   </div>
   <div class="flex full-width justify-center">
     <ProductPagination />
@@ -18,15 +18,15 @@ const props = defineProps<{
 
 <style lang="scss">
 @media (min-width: $breakpoint-lg-min) {
-  .productCard { width: 25%; }
+  .product-card { width: 25%; }
 }
 @media (max-width: $breakpoint-md-max) {
-  .productCard { width: 33%; }
+  .product-card { width: 33%; }
 }
 @media (max-width: $breakpoint-sm-max) {
-  .productCard { width: 50%; }
+  .product-card { width: 50%; }
 }
 @media (max-width: $breakpoint-xs-max) {
-  .productCard { width: 100%; }
+  .product-card { width: 100%; }
 }
 </style>
