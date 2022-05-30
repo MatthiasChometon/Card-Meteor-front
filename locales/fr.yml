@@ -20,8 +20,8 @@ product:
     step:
       label: filtrer par étape du produit
       type:
-        0: en cours de création
-        1: en cours de validation
-        2: publié
+        1: en cours de création
+        2: en cours de validation
+        3: publié
 
 not-found: Page non trouvée

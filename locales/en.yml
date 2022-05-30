@@ -20,7 +20,7 @@ product:
     step:
       label: filter by product step
       type:
-        0: being created
-        1: being validated
-        2: released
+        1: being created
+        2: being validated
+        3: released
 not-found: Not found
