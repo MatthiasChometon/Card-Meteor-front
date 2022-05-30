@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import { useProductListFilter } from '../../../stores/products/listFilter'
-const { setDirection, getBooleanDirection } = useProductListFilter()
-const direction = $computed({
-  get() {
-    return getBooleanDirection()
-  },
-  set(newValue) {
-    setDirection(newValue)
-  },
-})
+import { Direction } from '~/enums/products/filter/Direction'
+
+const { setDirection, productListFilter } = useProductListFilter()
+const icon = $computed(() => productListFilter.orderBy.direction === Direction.ASC ? 'arrow_upward' : 'arrow_downward')
 </script>
 
 <template>
-  <q-btn v-model="direction" round size="16px" flat class="flex justify-center items-center" color="grey" icon="arrow_upward" />
+  <q-btn
+    round size="16px" flat class="flex justify-center items-center" color="grey"
+    :icon="icon"
+    @click="setDirection"
+  />
 </template>

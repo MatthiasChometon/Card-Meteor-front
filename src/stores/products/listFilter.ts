@@ -16,7 +16,7 @@ export const useProductListFilter = defineStore('productListFilter', () => {
     },
     filterBy: {
       name: '',
-      step: 2,
+      step: 3,
       pagination: {
         start: paginationParam.start,
         end: paginationParam.end,
@@ -41,12 +41,8 @@ export const useProductListFilter = defineStore('productListFilter', () => {
     productListFilter.filterBy.name = name
   }
 
-  function getBooleanDirection(): boolean {
-    return productListFilter.orderBy.direction === Direction.ASC
-  }
-
-  function setDirection(isAscending: boolean) {
-    const direction = isAscending ? Direction.ASC : Direction.DESC
+  function setDirection() {
+    const direction = productListFilter.orderBy.direction === Direction.ASC ? Direction.DESC : Direction.ASC
     productListFilter.orderBy.direction = direction
   }
 
@@ -56,7 +52,6 @@ export const useProductListFilter = defineStore('productListFilter', () => {
 
   return {
     setEditor,
-    getBooleanDirection,
     setDirection,
     setFilterName,
     setOrderName,
