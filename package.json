@@ -13,9 +13,13 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.5",
     "@quasar/extras": "^1.13.5",
+    "@vue/apollo-composable": "^4.0.0-alpha.17",
     "@vueuse/core": "^8.2.5",
     "@vueuse/head": "^0.7.5",
+    "graphql": "^16.5.0",
+    "graphql-tag": "^2.12.6",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.13",
     "quasar": "^2.6.6",

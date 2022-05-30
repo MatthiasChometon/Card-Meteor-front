@@ -4,7 +4,6 @@ import type { Product } from '../../types/product/list/Product'
 const props = defineProps<{
   product: Product
 }>()
-const { product } = props
 </script>
 
 <template>
@@ -17,7 +16,7 @@ min-width : 300px;" src="../assets/Card.png"
 
       <q-card-section>
         <div class="text-h5 q-mt-sm q-mb-xs">
-          {{ product.name }} <span style="margin-left:60%">Prix</span>
+          {{ props.product.name }} <span style="margin-left:60%">Prix</span>
         </div>
         <div class="text-caption text-grey">
           Arcétype dangereux
