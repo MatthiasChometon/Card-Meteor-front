@@ -24,7 +24,7 @@ const links: {
         style="height: 80px; max-width: 90px"
       />
     </div>
-    <div style="flex: 4;" class="q-ma-md flex justify-center items-center column text-accent">
+    <div class="q-ma-md flex justify-center items-center column text-accent footer-link">
       <router-link v-for="link in links" :key="link.text" :to="link.page" replace>
         {{ t(link.text) }}
       </router-link>
@@ -34,3 +34,14 @@ const links: {
     </div>
   </q-footer>
 </template>
+
+<style lang="scss">
+@media (min-width: $breakpoint-sm-min) {
+  .footer-link { flex: 4; }
+}
+
+@media (max-width: $breakpoint-sm-max) {
+ .footer-link { flex: 1; }
+}
+
+</style>
