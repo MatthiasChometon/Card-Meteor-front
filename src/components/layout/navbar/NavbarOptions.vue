@@ -2,7 +2,7 @@
   <div>
     <SwitchDarkMode />
     <SwitchLanguageButton />
-    <AccountButton size="40px" />
+    <AccountButton />
     <ShoppingButton />
   </div>
 </template>
