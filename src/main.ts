@@ -17,6 +17,7 @@ const cache = new InMemoryCache()
 const apolloClient = new ApolloClient({
   cache,
   uri: 'http://localhost:3000/graphql',
+  defaultOptions: { mutate: { errorPolicy: 'all' } },
 })
 
 export const createApp = ViteSSG(
