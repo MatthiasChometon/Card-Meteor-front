@@ -18,5 +18,12 @@
   display: flex;
 }
 
+@media (min-width: $breakpoint-sm-min) {
+  .icon { font-size: $icon-desktop-size !important; }
+}
+
+@media (max-width: $breakpoint-sm-max) {
+  .icon { font-size: $icon-mobile-size !important; }
+}
 
 </style>
