@@ -9,7 +9,7 @@
     </div>
     <NavbarIcon style="flex: 3;" class="mobile-navbar q-pa-md" />
     <div class="mobile-navbar">
-      <AccountButton size="60px" />
+      <AccountButton size="40px" />
     </div>
   </q-header>
 </template>
@@ -17,7 +17,6 @@
 <style lang="scss">
 @media (min-width: $breakpoint-sm-min) {
   .mobile-navbar { display: none; }
-
   .desktop-navbar { display: flex; }
 }
 
@@ -27,7 +26,6 @@
     justify-content: center;
     align-items: center;
   }
-
   .desktop-navbar { display: none; }
 }
 
