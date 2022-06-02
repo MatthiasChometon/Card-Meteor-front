@@ -10,7 +10,7 @@ const links: {
     text: 'navbar.homepage',
   },
   {
-    page: '',
+    page: '/product/list',
     text: 'navbar.products',
   },
   {
