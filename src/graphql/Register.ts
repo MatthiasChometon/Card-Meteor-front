@@ -6,6 +6,9 @@ mutation register($input: CreateUserInput!) {
     user {
       id
       username
+      firstName
+      lastName
+      role
     }
     accessToken
     refreshToken
