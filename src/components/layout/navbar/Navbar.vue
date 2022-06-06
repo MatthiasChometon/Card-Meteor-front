@@ -9,15 +9,22 @@
     </div>
     <NavbarIcon style="flex: 3;" class="mobile-navbar q-pa-md" />
     <div class="mobile-navbar">
-      <AccountButton size="40px" />
+      <AuthenticationButton />
+      <ShoppingButton />
     </div>
   </q-header>
 </template>
 
-<style lang="scss">
+<style lang="scss"
+      >
 @media (min-width: $breakpoint-sm-min) {
-  .mobile-navbar { display: none; }
-  .desktop-navbar { display: flex; }
+  .mobile-navbar {
+    display: none;
+  }
+
+  .desktop-navbar {
+    display: flex;
+  }
 }
 
 @media (max-width: $breakpoint-sm-max) {
@@ -26,7 +33,10 @@
     justify-content: center;
     align-items: center;
   }
-  .desktop-navbar { display: none; }
+
+  .desktop-navbar {
+    display: none;
+  }
 }
 
 body.body--dark .q-header,
