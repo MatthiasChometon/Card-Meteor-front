@@ -30,7 +30,8 @@ onDone((result) => {
   sendNotification(result, { path: 'register.onSuccess', variables }, { path: 'register.onError' })
   if (result.errors)
     return
-  setConnectedUser(result.data)
+
+  setConnectedUser(result.data.register)
   router.replace('/')
 })
 
