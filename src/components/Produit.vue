@@ -1,3 +1,7 @@
+<script>
+const nombre: int = $ref(0);
+</script>
+
 <template>
   <div class="q-pa-md">
     <q-card class="my-card">
@@ -27,7 +31,7 @@
             v-model.number="model"
             type="number"
             outlined
-            style="max-width: 50px; margin-left: 2px"
+            style="max-width: 50px; margin-left: 2px" />
           />
           <q-btn align:center justify:center>+</q-btn>
           <div style="margin-left: 15%">

@@ -75,7 +75,25 @@ const links: {
       </div>
       <Dialog />
       <div class="Navebar">
-        <q-btn flat @click="$router.replace('/Panier')">
+        <q-btn flat >
+          <q-menu fit style="width: 280px;">
+          <q-list style="min-width: 100px">
+            <q-item clickable>
+              <q-item-section style="text-align: center;">mes produits</q-item-section>
+            </q-item>
+            <q-item clickable>
+              <q-item-section style="text-align: center;">mes commandes</q-item-section>
+            </q-item>
+            <q-item clickable>
+              <q-item-section style="text-align: center;">mon compte</q-item-section>
+            </q-item>
+            <q-item clickable>
+             <q-btn style=" margin: 0;
+            background: linear-gradient(#bd35c9, #6182c3, #6182c3, #22b7bf);
+          ">Deconexion</q-btn>
+            </q-item>
+          </q-list>
+        </q-menu>
           <q-icon
             color="primary"
             size="40px"
