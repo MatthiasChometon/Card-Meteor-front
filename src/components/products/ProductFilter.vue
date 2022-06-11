@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useConnectedUser } from '../../stores/users/connected'
-const { isValidator, isUser } = useConnectedUser()
+import { UserRoles } from '../../enums/users/UserRoles'
+const { connectedUser } = useConnectedUser()
 </script>
 
 <template>
@@ -10,7 +11,7 @@ const { isValidator, isUser } = useConnectedUser()
       <ProductTypeOrder style="flex: 1;" />
     </div>
     <ProductSearchFilter class="q-pa-md" style="flex: 1; min-width: 280px;" />
-    <ProductStepFilter v-if="isValidator" class="q-pa-md" style="flex: 1;  min-width: 280px;" />
-    <UserProductFilter v-if="isUser" class="q-pa-md" style="flex: 0.6;  min-width: 280px;" />
+    <ProductStepFilter v-if="connectedUser.role === UserRoles.validator" class="q-pa-md" style="flex: 1;  min-width: 280px;" />
+    <UserProductFilter v-if="connectedUser.role === UserRoles.user" class="q-pa-md" style="flex: 0.6;  min-width: 280px;" />
   </q-card>
 </template>
