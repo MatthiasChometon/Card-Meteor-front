@@ -23,6 +23,17 @@ product:
         1: being created
         2: being validated
         3: released
+  card:
+    archetype: archetype
+  shopping:
+    title: my order
+    paypal: payment with Paypal
+    summary:
+      title: finalize my order
+      articles: my articles
+      delivery: delivery
+      total: total
+      validate: order
 login:
   onError: incorrect password or email
   onSuccess: welcome %{username} !
@@ -46,6 +57,8 @@ register:
     label: already have an account ?
     link: Connect yourself
 form:
+  password: password
+  email: email
   rulesError:
     empty: you did not enter your %{key}
     phoneNotValid: your phone number is not valid
