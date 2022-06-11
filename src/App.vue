@@ -10,3 +10,9 @@ useHead({
 <template>
   <RouterView />
 </template>
+
+<style lang="scss">
+  .primary-border {
+    border: 1px solid $primary;
+  }
+</style>
