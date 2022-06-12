@@ -2,6 +2,7 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import type { Product } from '~/types/product/list/Product'
 import type { PaypalPayment } from '~/types/product/shopping/PaypalPayment'
 import type { ShoppingProducts } from '~/types/product/shopping/ShoppingProducts'
+import type { ShoppingSummary } from '~/types/product/shopping/ShoppingSummary'
 
 export const useShoppingCart = defineStore('shoppingCart', () => {
   const shoppingCart: ShoppingProducts = $ref([])
@@ -9,6 +10,27 @@ export const useShoppingCart = defineStore('shoppingCart', () => {
     email: '',
     password: '',
   })
+  const shoppingSummary: ShoppingSummary = $ref({
+    totalPrice: 0,
+    shippingCostPrice: 4,
+    productsPrice: 0,
+  })
+
+  watch(shoppingCart, () => {
+    shoppingSummary.productsPrice = computedProductsPrice()
+    shoppingSummary.totalPrice = computedTotalPrice()
+  })
+
+  function computedProductsPrice(): number {
+    const total = shoppingCart.reduce((total, product) => total + product.number * product.price, 0)
+    return total
+  }
+
+  function computedTotalPrice(): number {
+    const { productsPrice, shippingCostPrice } = shoppingSummary
+    const total = productsPrice + shippingCostPrice
+    return total
+  }
 
   function addProduct(product: Product): void {
     const index: number = getProductIndex(product)
@@ -44,6 +66,7 @@ export const useShoppingCart = defineStore('shoppingCart', () => {
   return {
     shoppingCart,
     shoppingPayment,
+    shoppingSummary,
     addProduct,
     removeProduct,
     chooseProductNumber,
