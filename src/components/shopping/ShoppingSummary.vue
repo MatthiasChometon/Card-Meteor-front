@@ -1,23 +1,30 @@
 <script setup lang="ts">
-const { t } = useI18n()
+import { useShoppingCart } from '~/stores/products/shoppingCart'
 
-const 
+const { shoppingSummary } = useShoppingCart()
+const { t } = useI18n()
 </script>
 
 <template>
-  <div class="primary-border q-ma-md q-pa-md flex justify-center columns">
+  <div class="primary-border q-mx-md q-pa-md flex justify-center column content-center">
     <div class="text-primary text-h4 q-pt-md">
       {{ t('product.shopping.summary.title') }}
     </div>
-    <div>
-      <div>   {{ t('product.shopping.summary.articles') }}</div>
-    <div></div>
+    <div class="flex justify-between q-pt-lg text-subtitle1">
+      <div>{{ t('product.shopping.summary.articles') }}</div>
+      <div>{{ shoppingSummary.productsPrice }} €</div>
     </div>
-
-    {{ t('product.shopping.summary.delivery') }}
-
-    {{ t('product.shopping.summary.total') }}
-    <q-btn>
+    <div class="flex justify-between q-pt-sm text-subtitle1">
+      <div>{{ t('product.shopping.summary.delivery') }}</div>
+      <div>{{ shoppingSummary.shippingCostPrice }} €</div>
+    </div>
+    <div class="flex justify-between q-py-lg text-h5">
+      <div>
+        {{ t('product.shopping.summary.total') }}
+      </div>
+      <div>{{ shoppingSummary.totalPrice }} €</div>
+    </div>
+    <q-btn :disabled="shoppingSummary.productsPrice === 0">
       {{ t('product.shopping.summary.validate') }}
     </q-btn>
   </div>
