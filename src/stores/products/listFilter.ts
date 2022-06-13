@@ -47,7 +47,7 @@ export const useProductListFilter = defineStore('productListFilter', () => {
   }
 
   function setEditor(hasToFilterByEditor: boolean) {
-    productListFilter.filterBy.editor = hasToFilterByEditor ? connectedUser?.id : undefined
+    productListFilter.filterBy.editor = hasToFilterByEditor ? `${connectedUser?.id}` : undefined
   }
 
   return {

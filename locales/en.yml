@@ -23,4 +23,45 @@ product:
         1: being created
         2: being validated
         3: released
+  card:
+    archetype: archetype
+  shopping:
+    title: my order
+    paypal: payment with Paypal
+    summary:
+      title: finalize my order
+      articles: my articles
+      delivery: delivery
+      total: total
+      validate: order
+login:
+  onError: incorrect password or email
+  onSuccess: welcome %{username} !
+  email: email
+  password: password
+  registerLink:
+    label: no account yet ?
+    link: register yourself
+register:
+  onError: error during authentication
+  onSuccess: welcome %{username} !
+  title: register
+  lastName: last name
+  firstName: first name
+  email: email
+  phone: phone
+  password: password
+  repeatedPassword: password confirmation
+  username: username
+  loginLink:
+    label: already have an account ?
+    link: Connect yourself
+form:
+  password: password
+  email: email
+  rulesError:
+    empty: you did not enter your %{key}
+    phoneNotValid: your phone number is not valid
+    passwordTooShort: your password must contain at least %{passwordLength} characters
+    repeatedPasswordNotValid: passwords do not match
 not-found: Not found

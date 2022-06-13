@@ -23,5 +23,45 @@ product:
         1: en cours de création
         2: en cours de validation
         3: publié
-
+  card:
+    archetype: archétype
+  shopping:
+    title: ma commande
+    paypal: payement via Paypal
+    summary:
+      title: finaliser ma commande
+      articles: mes articles
+      delivery: livraison
+      total: total
+      validate: commander
+login:
+  onError: mot de passe ou email incorrect
+  onSuccess: bienvenue %{username} !
+  email: email
+  password: mot de passe
+  registerLink:
+    label: pas encore de compte ?
+    link: Inscris toi
+register:
+  onError: erreur lors de l'authentification
+  onSuccess: bienvenue %{username} !
+  title: s'inscrire
+  lastName: nom
+  firstName: prénom
+  email: email
+  phone: numéro de téléphone
+  password: mot de passe
+  repeatedPassword: confirmation du mot de passe
+  username: pseudo
+  loginLink:
+    label: déjà un compte ?
+    link: Connecte toi
+form:
+  password: mot de passe
+  email: email
+  rulesError:
+    empty: tu n'as pas entré ton %{key}
+    phoneNotValid: ton numéro de téléphone n'est pas valide
+    passwordTooShort: ton mot de passe doit contenir au moins %{passwordLength} caractères
+    repeatedPasswordNotValid: les mots de passes ne correspondent pas
 not-found: Page non trouvée

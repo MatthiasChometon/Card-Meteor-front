@@ -3,30 +3,47 @@ import type { ProductList } from '../../types/product/list/ProductList'
 
 const props = defineProps<{
   products: ProductList
+  isShoppingList?: boolean
 }>()
+defineEmits(['add', 'remove', 'selectNumber'])
 </script>
 
 <template>
-  <ProductFilter />
-  <div class="flex full-width">
-    <ProductCard v-for="product in props.products" :key="product.id" class="productCard" :product="product" />
+  <ProductFilter v-if="!isShoppingList" />
+  <div class="flex full-width row">
+    <ProductCard
+      v-for="product in props.products" :key="product.id" class="product-card" :product="product"
+      :is-shopping-list="isShoppingList" @add="$emit('add', product)" @remove="$emit('remove', product)"
+      @select-number="(selectedNumber) => $emit('selectNumber', { selectedNumber, product })"
+    />
   </div>
-  <div class="flex full-width justify-center">
+  <div v-if="!isShoppingList" class="flex full-width justify-center q-mt-md">
     <ProductPagination />
   </div>
 </template>
 
 <style lang="scss">
 @media (min-width: $breakpoint-lg-min) {
-  .productCard { width: 25%; }
+  .product-card {
+    width: 20%;
+  }
 }
+
 @media (max-width: $breakpoint-md-max) {
-  .productCard { width: 33%; }
+  .product-card {
+    width: 30%;
+  }
 }
+
 @media (max-width: $breakpoint-sm-max) {
-  .productCard { width: 50%; }
+  .product-card {
+    width: 44%;
+  }
 }
+
 @media (max-width: $breakpoint-xs-max) {
-  .productCard { width: 100%; }
+  .product-card {
+    width: 100%;
+  }
 }
 </style>

@@ -1,3 +1,3 @@
-import type { Product } from './Product'
+import type { ProductForList } from './ProductForList'
 
-export type ProductList = Product[]
+export type ProductList = ProductForList[]
