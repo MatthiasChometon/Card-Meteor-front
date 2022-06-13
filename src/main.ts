@@ -17,6 +17,9 @@ const apolloClient = new ApolloClient({
   cache,
   uri: 'http://localhost:3000/graphql',
   defaultOptions: { mutate: { errorPolicy: 'all' } },
+  headers: {
+    authorization: `Bearer ${localStorage.getItem('accessToken') || ''}`,
+  },
 })
 
 export const createApp = ViteSSG(
