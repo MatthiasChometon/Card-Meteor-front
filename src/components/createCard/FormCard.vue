@@ -1,5 +1,26 @@
+<script setup lang="ts">
+import { CREATE_CARD  } from '~/graphql/CreateCard'
+
+import { useMutation } from '@vue/apollo-composable'
+const { mutate: register, onDone } = useMutation(CREATE_CARD , {
+  fetchPolicy: 'network-only',
+})
+
+const newUser = $ref({
+  lastName: '',
+  firstName: '',
+  username: '',
+  password: '',
+  phone: '',
+  email: '',
+})
+
+
+</script>
+
 <template>
   <div class="column" style="height: 150px">
+  <q-form class="q-gutter-md q-pt-md" @submit="register({ input: newUser })">
     <div class="col-4 col-md-6"></div>
     <div class="col-4 col-md-6">
            <div class="q-gutter-md">
@@ -23,5 +44,6 @@
 
       </div>
     </div>
+    </q-form>
   </div>
 </template>
