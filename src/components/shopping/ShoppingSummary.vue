@@ -3,6 +3,7 @@ import { useShoppingCart } from '~/stores/products/shoppingCart'
 
 const { shoppingSummary } = useShoppingCart()
 const { t } = useI18n()
+defineEmits(['order'])
 </script>
 
 <template>
@@ -24,7 +25,7 @@ const { t } = useI18n()
       </div>
       <div>{{ shoppingSummary.totalPrice }} €</div>
     </div>
-    <q-btn :disabled="shoppingSummary.productsPrice === 0">
+    <q-btn color="primary" :disabled="shoppingSummary.productsPrice === 0" @click="$emit('order')">
       {{ t('product.shopping.summary.validate') }}
     </q-btn>
   </div>

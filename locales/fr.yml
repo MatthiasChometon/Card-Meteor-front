@@ -64,4 +64,7 @@ form:
     phoneNotValid: ton numéro de téléphone n'est pas valide
     passwordTooShort: ton mot de passe doit contenir au moins %{passwordLength} caractères
     repeatedPasswordNotValid: les mots de passes ne correspondent pas
+card:
+  onCreationSuccess: ta commande %{trackingNumber} a été crée
+  onCreationError: erreur lors de la création de ta commande
 not-found: Page non trouvée
