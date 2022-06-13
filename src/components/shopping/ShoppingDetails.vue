@@ -5,7 +5,7 @@ const { t } = useI18n()
 const props = defineProps<{
   shoppingProducts: ShoppingProduct[]
 }>()
-defineEmits(['add', 'remove', 'selectNumber'])
+defineEmits(['add', 'remove', 'selectNumber', 'order'])
 </script>
 
 <template>
@@ -15,14 +15,16 @@ defineEmits(['add', 'remove', 'selectNumber'])
         {{ t('product.shopping.title') }}
       </div>
       <ProductList
-        :products="props.shoppingProducts" :is-shopping-list="true" @add="(product) => $emit('add', product)"
+        :products="props.shoppingProducts"
+        :is-shopping-list="true"
+        @add="(product) => $emit('add', product)"
         @remove="(product) => $emit('remove', product)"
         @select-number="({ selectedNumber, product }) => $emit('selectNumber', { selectedNumber, product })"
       />
     </div>
     <div style="flex: 1;">
       <ShoppingPayment />
-      <ShoppingSummary />
+      <ShoppingSummary @order="$emit('order')" />
     </div>
   </div>
 </template>
