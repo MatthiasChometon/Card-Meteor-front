@@ -6,7 +6,7 @@ const links: {
   text: string
 }[] = $ref([
   {
-    page: '',
+    page: '/',
     text: 'navbar.homepage',
   },
   {
