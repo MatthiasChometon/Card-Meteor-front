@@ -1,3 +1,6 @@
+<script setup lang="ts">
+defineEmits(['createCard'])
+</script>
 <template>
   <div>
     <div>
@@ -23,7 +26,7 @@ close
       </q-card>
     </div>
     <div>
-      <q-btn>Proposer</q-btn>
+      <q-btn  @click=" $emit('createCard')">Proposer</q-btn>
     </div>
   </div>
 </template>
