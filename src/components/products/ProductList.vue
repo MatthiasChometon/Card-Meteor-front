@@ -15,6 +15,7 @@ defineEmits(['add', 'remove', 'selectNumber'])
       v-for="product in props.products" :key="product.id" class="product-card" :product="product"
       :is-shopping-list="isShoppingList" @add="$emit('add', product)" @remove="$emit('remove', product)"
       @select-number="(selectedNumber) => $emit('selectNumber', { selectedNumber, product })"
+      
     />
   </div>
   <div v-if="!isShoppingList" class="flex full-width justify-center q-mt-md">

@@ -7,8 +7,10 @@ const { mutate: createcard } = useMutation(CREATE_CARD, {
 });
 const fruits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 const Atribut = ["TÉNÈBRES", "LUMIÈRE", "TERRE", "EAU", "FEU", "VENT	", "DIVIN"];
+const type = ["Effet", "normal", "fusion", "xyz", "synchron", "magie	", "piège"];
 
 const color = ref("#FF00FF");
+defineEmits(['findname'])
 
 const newCard = $ref({
   name: "",
@@ -43,6 +45,8 @@ const newCard = $ref({
               v-model="newCard.name"
               label="Nom de la carte"
               style="width: 500px"
+              @change="(findname) =>$emit('findname', { findname,name })"
+               :rules="[(v) => !!v || 'Veuillez entrer votre nom']"
             />
             <span>Image de la carte</span>
             <q-file
@@ -82,7 +86,7 @@ const newCard = $ref({
                   style="width: 150px; margin-right: 2%"
                 />
               </div>
-              <div class="col-3">
+              <div class="col">
                 <q-select
                   outlined
                   v-model="newCard.level"
@@ -91,31 +95,14 @@ const newCard = $ref({
                   style="width: 150px"
                 />
               </div>
-              <div class="row">
-                <div class="col">
-                  <q-input filled v-model="color" class="my-input">
-                    <template v-slot:append>
-                      <q-icon name="colorize" class="cursor-pointer">
-                        <q-popup-proxy
-                          cover
-                          transition-show="scale"
-                          transition-hide="scale"
-                        >
-                          <q-color v-model="color" />
-                        </q-popup-proxy>
-                      </q-icon>
-                    </template>
-                  </q-input>
-                </div>
-                <div class="col">
-                  <q-select
-                    outlined
-                    v-model="newCard.level"
-                    :options="Arcétype"
-                    label="Atribut"
-                    style="width: 150px"
-                  />
-                </div>
+              <div class="col">
+                <q-select
+                  outlined
+                  v-model="newCard.level"
+                  :options="Arcétype"
+                  label="Atribut"
+                  style="width: 150px"
+                />
               </div>
             </div>
           </div>

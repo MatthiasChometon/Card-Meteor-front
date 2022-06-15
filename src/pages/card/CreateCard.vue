@@ -1,15 +1,18 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <div class="row">
-
-    <div class="col-3">
-      <Imgautil style="height: 500px; max-width: 500px" />
+  <div class="row flex self-center" style="height: 100%">
+    <div style="flex: 2" class="self-center">
+      <CretaeCrad style="height: 500px; max-width: 500px" />
     </div>
 
-    <div class="col-4">
-      <FormCard style="margin: 0 10px;" />
+    <div style="flex: 1" class="self-center">
+      <FormCard />
     </div>
-    <div class="col-4">
-      <HistoriqueUser />
+
+    <div style="flex: 1" class="self-center">
+      <HistoriqueUser  @change="(findname) =>$emit('findname', { findname,name })" style="flex: 1" class="justify-center" />
     </div>
   </div>
 </template>

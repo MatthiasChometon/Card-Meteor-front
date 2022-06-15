@@ -1,13 +1,22 @@
+<script setup lang="ts">
+
+const props = defineProps<{
+  isShoppingList?: object
+}>()
+
+</script>
 <template>
   <div style="width: 300px">
-    <q-img src="../assets/CarteVierge.png" style="width: 25em"
+    <q-img src="../assets/CarteVierge.png" é
+    style="width: 25em; background-color:Orange"
       ><div
         style="
-          margin-left: 40px;
-          margin-top: 7%;
-          height: 40px;
-          width: 92%;
-          border-style: none;
+          margin-left: 37px;
+          margin-top: 9%;
+          height: 39px;
+          width: 80%;
+          background-color:orange;color:white;
+          margin-right: 90%;
         "
         class="row"
       >
@@ -18,7 +27,7 @@
           <q-img
             src="../assets/Tenebre.png"
             spinner-color="red"
-            style="width: 30%"
+            style="width: 30%;margin-left: 70%;"
           />
         </div>
       </div>

@@ -6,7 +6,9 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AccountButton: typeof import('./components/layout/navbar/AccountButton.vue')['default']
     AuthenticationButton: typeof import('./components/layout/navbar/AuthenticationButton.vue')['default']
+    CretaeCrad: typeof import('./components/CretaeCrad.vue')['default']
     Footer: typeof import('./components/layout/Footer.vue')['default']
+    FormAccount: typeof import('./components/FormAccount.vue')['default']
     FormCard: typeof import('./components/createCard/FormCard.vue')['default']
     HistoriqueUser: typeof import('./components/createCard/HistoriqueUser.vue')['default']
     Imgautil: typeof import('./components/createCard/Imgautil.vue')['default']
@@ -32,8 +34,6 @@ declare module '@vue/runtime-core' {
     ProductTypeOrder: typeof import('./components/products/orderBy/ProductTypeOrder.vue')['default']
     RegisterForm: typeof import('./components/authentication/register/RegisterForm.vue')['default']
     RegisterLink: typeof import('./components/authentication/register/RegisterLink.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     ShoppingButton: typeof import('./components/layout/navbar/ShoppingButton.vue')['default']
     ShoppingDetails: typeof import('./components/shopping/ShoppingDetails.vue')['default']
     ShoppingPayment: typeof import('./components/shopping/ShoppingPayment.vue')['default']
