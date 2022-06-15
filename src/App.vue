@@ -12,7 +12,12 @@ useHead({
 </template>
 
 <style lang="scss">
-  .primary-border {
-    border: 1px solid $primary;
-  }
+.primary-border {
+  border: 1px solid $primary;
+}
+
+::selection {
+  color: #fff;
+  background: $accent;
+}
 </style>
