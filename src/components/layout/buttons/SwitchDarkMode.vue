@@ -9,5 +9,8 @@ watch(toggle, () => {
 </script>
 
 <template>
-  <q-toggle v-model="toggle" size="50px" keep-color checked-icon="dark_mode" color="primary" unchecked-icon="light_mode" />
+  <q-toggle
+    v-model="toggle" class="home-not-display " size="50px" keep-color checked-icon="dark_mode" color="primary"
+    unchecked-icon="light_mode"
+  />
 </template>
