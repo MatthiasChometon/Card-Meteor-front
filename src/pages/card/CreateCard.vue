@@ -1,5 +1,11 @@
 <script setup lang="ts">
-
+import { useMutation } from '@vue/apollo-composable'
+import { useCreateCard } from '~/stores/Card/CreateCard'
+import { CREATE_CARD } from '~/graphql/CreateCard'
+const card = useCreateCard()
+const { mutate: createcard } = useMutation(CREATE_CARD, {
+  fetchPolicy: 'network-only',
+})
 
 </script>
 
@@ -14,7 +20,7 @@
     </div>
 
     <div style="flex: 1" class="self-center">
-      <HistoriqueUser  @createcard="createcard({})" class="justify-center" />
+      <HistoriqueUser  @createcard="createcard({card})" class="justify-center" />
     </div>
   </div>
 </template>

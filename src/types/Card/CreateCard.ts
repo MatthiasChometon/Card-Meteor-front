@@ -7,5 +7,6 @@ export interface CreateCard {
   attack: number
   defense: number
   archetype: string
+  type: string
 
 }

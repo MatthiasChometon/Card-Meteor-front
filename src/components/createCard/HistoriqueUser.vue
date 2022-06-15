@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineEmits(['createCard'])
+defineEmits(['createcard'])
 </script>
 <template>
   <div>
@@ -25,7 +25,7 @@ defineEmits(['createCard'])
     </q-card>
   </div>
   <div>
-    <q-btn @click="$emit('createCard')">
+    <q-btn @click="$emit('createcard')">
       Proposer
     </q-btn>
   </div>

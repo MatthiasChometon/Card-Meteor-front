@@ -8,10 +8,8 @@ const { mutate: createcard, onDone } = useMutation(CREATE_CARD, {
 })
 const newCard = useCreateCard()
 const fruits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-const Atribut = ['Tenebres', 'Lumière', 'Terre', 'Eau', 'Feu', 'Vent', 'Divin']
-const type = ['Effet', 'normal', 'fusion', 'xyz', 'synchron', 'magie	', 'piège']
-
-const color = ref('#FF00FF')
+const Atribut = ['Tenebre', 'Lumière', 'Terre', 'Eau', 'Feu', 'Vent', 'Divin']
+const type = ['Effet', 'Normal', 'fusion', 'xyz', 'synchron', 'magie', 'Piege']
 
 defineEmits(['findname'])
 
@@ -26,7 +24,13 @@ defineEmits(['findname'])
         <div class="col-8 col-md-6" />
         <div class="col-4 col-md-6">
           <div class="q-gutter-md">
-            <span>Nom de la carte</span>
+             <q-select
+                 v-model="newCard.type"
+                  outlined
+                  :options="type"
+                  label="Atribut"
+                  style="width: 150px"
+                />
             <q-input
               v-model="newCard.name"
               outlined

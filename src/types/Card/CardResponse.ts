@@ -8,4 +8,5 @@ export interface CardResponse {
   attack: number
   defense: number
   archetype: string
+  type: string
 }

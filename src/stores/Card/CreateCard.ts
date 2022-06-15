@@ -12,5 +12,6 @@ export const useCreateCard: CreateGlobalStateReturn<RemovableRef<CreateCard>> = 
     attack: 0,
     defense: 0,
     archetype: '',
+    type: 'effet',
   }),
 )
