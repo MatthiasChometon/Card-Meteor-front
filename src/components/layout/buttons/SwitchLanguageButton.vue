@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 const localeOptions = $ref([
   { value: 'en', label: 'English' },
@@ -11,12 +11,11 @@ const localeOptions = $ref([
   <q-select
     v-model="locale"
     :options="localeOptions"
-    label="website language"
-    dense
-    borderless
+    :label="t('button.switchLanguage')"
+    outlined
     emit-value
     map-options
     options-dense
-    style="min-width: 150px"
+    style="min-width: 160px"
   />
 </template>
