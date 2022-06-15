@@ -1,6 +1,6 @@
 export interface CreateCard {
   name: string
-  level: number
+  level: BigInteger
   attribute: string
   file: string
   description: string

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useMutation } from '@vue/apollo-composable'
-import { useCreateCard } from '~/stores/Card/CreateCard'
+import { useCreateCard } from '../../../stores/Card/CreateCard'
 import { CREATE_CARD } from '~/graphql/CreateCard'
 const card = useCreateCard()
 const { mutate: createcard } = useMutation(CREATE_CARD, {

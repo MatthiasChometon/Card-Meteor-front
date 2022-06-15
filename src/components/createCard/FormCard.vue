@@ -74,6 +74,15 @@ defineEmits(['findname'])
                   style="width: 150px"
                 />
               </div>
+                  <div class="col">
+                <q-select
+                 v-model="newCard.level"
+                  outlined
+                  :options="fruits"
+                  label="Niveau"
+                  style="width: 150px"
+                />
+              </div>
             
           </div>
         </div>

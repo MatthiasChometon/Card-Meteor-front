@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <router-link to="/product/create">
+  <router-link to="/product/card/create">
     <q-btn color="primary">
       {{ t('homepage.createButton') }}
     </q-btn>
