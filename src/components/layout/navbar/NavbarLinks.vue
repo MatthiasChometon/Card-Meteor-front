@@ -6,7 +6,7 @@ const links: {
   text: string
 }[] = $ref([
   {
-    page: '',
+    page: '/',
     text: 'navbar.homepage',
   },
   {
@@ -25,7 +25,7 @@ const links: {
   <div>
     <router-link
       v-for="link in links" :key="link.text" :to="link.page" replace
-      class="text-h6 q-pa-md q-px-md text-primary flex justify-center content-center"
+      class="text-h6 q-pa-md q-px-md text-primary flex justify-center content-center home-links"
     >
       {{ t(link.text) }}
     </router-link>

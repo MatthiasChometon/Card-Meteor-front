@@ -11,7 +11,7 @@ declare module '@vue/runtime-core' {
     FormAccount: typeof import('./components/FormAccount.vue')['default']
     FormCard: typeof import('./components/createCard/FormCard.vue')['default']
     HistoriqueUser: typeof import('./components/createCard/HistoriqueUser.vue')['default']
-    Imgautil: typeof import('./components/createCard/Imgautil.vue')['default']
+    HomePresentation: typeof import('./components/home/HomePresentation.vue')['default']
     InformationCommande: typeof import('./components/InformationCommande.vue')['default']
     InformationUser: typeof import('./components/InformationUser.vue')['default']
     ListCard: typeof import('./components/ListCard.vue')['default']

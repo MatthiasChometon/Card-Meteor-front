@@ -64,4 +64,13 @@ form:
     phoneNotValid: ton numéro de téléphone n'est pas valide
     passwordTooShort: ton mot de passe doit contenir au moins %{passwordLength} caractères
     repeatedPasswordNotValid: les mots de passes ne correspondent pas
+card:
+  onCreationSuccess: ta commande %{trackingNumber} a été crée
+  onCreationError: erreur lors de la création de ta commande
 not-found: Page non trouvée
+homepage:
+  presentation: Meteor Card est un jeu de carte créé par la communauté. Tu peux créer et jouer tes propres cartes.
+  createButton: créer ma carte
+button:
+  productList: les produits
+  switchLanguage: language du site

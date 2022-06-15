@@ -1,5 +1,5 @@
 <template>
-  <q-header elevated class="bg-white flex">
+  <q-header class="bg-white flex q-header">
     <NavbarIcon style="flex: 1;" class="q-pa-md q-pl-md desktop-navbar" />
     <NavbarLinks style="flex: 2;" class="justify-center content-center desktop-navbar" />
     <NavbarOptions style="flex: 1;" class="justify-end items-center no-wrap desktop-navbar" />
@@ -15,8 +15,7 @@
   </q-header>
 </template>
 
-<style lang="scss"
-      >
+<style lang="scss">
 @media (min-width: $breakpoint-sm-min) {
   .mobile-navbar {
     display: none;
@@ -43,5 +42,9 @@ body.body--dark .q-header,
 body.body--dark .q-footer,
 body.body--dark .q-drawer {
   background: $dark  !important;
+}
+
+.q-header {
+  box-shadow: 0 0 10px 2px #0003, 0 0 10px #0000003d;
 }
 </style>

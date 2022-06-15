@@ -1,37 +1,55 @@
+<script setup lang="ts">
+onMounted(() => {
+  const layoutClasses = document.getElementsByClassName('q-layout')
+  layoutClasses[0]?.classList?.add('home')
+})
+onUnmounted(() => {
+  const layoutClasses = document.getElementsByClassName('q-layout')
+  layoutClasses[0]?.classList?.remove('home')
+})
+</script>
+
 <template>
-  <div align="center" justify="center" >
-    <h1 color="white">Meteor Card </h1>
-
-    <p color="white" class="col-1 col-md-5">
-      Meteor Card est un jeu de carte créé par la communauté. Tu peux créer et
-      jouer tes propres cartes.
-    </p>
-    <q-btn color="white" text-color="#BD35C9" label="Creer ma Carte"  @click="$router.replace('/CreateCard')"/>
-
-    <h3>Nos différents produit</h3>
-<div class="box">
-  <Produit2/>
-    <Produit2/>
-      <Produit2/>
-      
-
-  </div>
-     <h3>Les tendances</h3>
-    <div class="box">
-  <Produit2/>
-    <Produit2/>
-      <Produit2/>
-      
-
-  </div>
- </div>
-
+  <q-img src="../assets/space-night.gif" spinner-color="white" style="height: 100vh; max-width: 100vw">
+    <HomePresentation />
+  </q-img>
 </template>
 
-<style scoped>
-.box {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px 2em;
+<style lang="scss">
+.home {
+  .q-field {
+    background-color: #33335670;
+  }
+
+  .q-page-container {
+    padding-top: 0px !important;
+  }
+
+  .q-header {
+    box-shadow: 0px 0px 0px white !important;
+    background: transparent !important;
+  }
+
+  .home-links,
+  .q-icon {
+    color: white !important;
+    text-shadow: 4px 0px 20px black;
+  }
+
+  .home-not-display {
+    display: none !important;
+  }
+
+  .q-field--float .q-field__label {
+    color: white;
+  }
+
+  .q-field--auto-height.q-field--labeled .q-field__native {
+    color: white;
+  }
+
+  .q-field--outlined .q-field__control:before {
+    border-color: white;
+  }
 }
 </style>

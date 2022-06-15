@@ -1,10 +1,16 @@
+import { useMutation } from '@vue/apollo-composable'
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { CREATE_ORDER } from '~/graphql/Order'
 import type { Product } from '~/types/product/list/Product'
 import type { PaypalPayment } from '~/types/product/shopping/PaypalPayment'
 import type { ShoppingProducts } from '~/types/product/shopping/ShoppingProducts'
 import type { ShoppingSummary } from '~/types/product/shopping/ShoppingSummary'
 
 export const useShoppingCart = defineStore('shoppingCart', () => {
+  const { $patch } = useShoppingCart()
+  const { mutate: createOrder, onDone } = useMutation(CREATE_ORDER, {
+    fetchPolicy: 'network-only',
+  })
   const shoppingCart: ShoppingProducts = $ref([])
   const shoppingPayment: PaypalPayment = $ref({
     email: '',
@@ -19,7 +25,16 @@ export const useShoppingCart = defineStore('shoppingCart', () => {
   watch(shoppingCart, () => {
     shoppingSummary.productsPrice = computedProductsPrice()
     shoppingSummary.totalPrice = computedTotalPrice()
+    $patch({ shoppingSummary })
   })
+
+  function order() {
+    const products = shoppingCart.map((product) => {
+      const { number, id, price } = product
+      return { number, id, price }
+    })
+    createOrder({ input: { products } })
+  }
 
   function computedProductsPrice(): number {
     const total = shoppingCart.reduce((total, product) => total + product.number * product.price, 0)
@@ -70,6 +85,8 @@ export const useShoppingCart = defineStore('shoppingCart', () => {
     addProduct,
     removeProduct,
     chooseProductNumber,
+    order,
+    onDone,
   }
 })
 

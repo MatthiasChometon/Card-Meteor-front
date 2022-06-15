@@ -10,8 +10,8 @@ export const useConnectedUser = defineStore('connectedUser', () => {
 
   function setConnectedUser({ user, accessToken, refreshToken }: LoginResponse): void {
     $patch({ connectedUser: user })
-    const storageToken = useStorage('tokens', { refreshToken, accessToken })
-    storageToken.value = { refreshToken, accessToken }
+    localStorage.setItem('accessToken', accessToken)
+    localStorage.setItem('refreshToken', refreshToken)
   }
 
   return {
