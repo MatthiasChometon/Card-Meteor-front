@@ -33,6 +33,7 @@ onUnmounted(() => {
   .home-links,
   .q-icon {
     color: white !important;
+    text-shadow: 4px 0px 20px black;
   }
 
   .home-not-display {
