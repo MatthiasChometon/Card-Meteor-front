@@ -14,7 +14,12 @@ export const useConnectedUser = defineStore('connectedUser', () => {
     localStorage.setItem('refreshToken', refreshToken)
   }
 
+  function updateConnectedUser(user: ConnectedUser): void {
+    $patch({ connectedUser: user })
+  }
+
   return {
+    updateConnectedUser,
     setConnectedUser,
     connectedUser,
   }
