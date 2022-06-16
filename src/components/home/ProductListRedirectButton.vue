@@ -10,6 +10,6 @@ const { t } = useI18n()
     >
       {{ t('button.productList') }}
     </div>
-    <q-icon name="chevron_right" class="icon q-primary flex justify-center content-center q-icon-home" />
+    <q-icon name="chevron_right" class="icon q-primary flex justify-center content-center home-icon" />
   </router-link>
 </template>
