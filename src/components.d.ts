@@ -6,6 +6,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AccountButton: typeof import('./components/layout/navbar/AccountButton.vue')['default']
     AuthenticationButton: typeof import('./components/layout/navbar/AuthenticationButton.vue')['default']
+    EmailInput: typeof import('./components/forms/EmailInput.vue')['default']
     Footer: typeof import('./components/layout/Footer.vue')['default']
     HomePresentation: typeof import('./components/home/HomePresentation.vue')['default']
     LoginForm: typeof import('./components/authentication/login/LoginForm.vue')['default']
@@ -14,6 +15,8 @@ declare module '@vue/runtime-core' {
     NavbarIcon: typeof import('./components/layout/navbar/NavbarIcon.vue')['default']
     NavbarLinks: typeof import('./components/layout/navbar/NavbarLinks.vue')['default']
     NavbarOptions: typeof import('./components/layout/navbar/NavbarOptions.vue')['default']
+    PasswordConfirmationInput: typeof import('./components/forms/PasswordConfirmationInput.vue')['default']
+    PhoneInput: typeof import('./components/forms/PhoneInput.vue')['default']
     ProductCard: typeof import('./components/products/ProductCard.vue')['default']
     ProductCreationRedirectButton: typeof import('./components/home/ProductCreationRedirectButton.vue')['default']
     ProductDirectionOrder: typeof import('./components/products/orderBy/ProductDirectionOrder.vue')['default']
