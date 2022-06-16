@@ -74,3 +74,9 @@ homepage:
 button:
   productList: products
   switchLanguage: website language
+account:
+  title: my account
+  modifyButton: modify
+  onModifySuccess: account updated
+  onModifyError: error when modifying your account
+  hasToModifyPassword: want to change your password ?
