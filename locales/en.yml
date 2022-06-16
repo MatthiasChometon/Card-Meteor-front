@@ -64,6 +64,7 @@ form:
     phoneNotValid: your phone number is not valid
     passwordTooShort: your password must contain at least %{passwordLength} characters
     repeatedPasswordNotValid: passwords do not match
+    emailNotValid: this is not a valid email
 card:
   onCreationSuccess: your order %{trackingNumber} has been created
   onCreationError: error when creating order
