@@ -81,3 +81,8 @@ account:
   onModifySuccess: account updated
   onModifyError: error when modifying your account
   hasToModifyPassword: want to change your password ?
+  logout: logout
+links:
+  products: my products
+  order: my orders
+  account: my account

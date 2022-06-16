@@ -81,3 +81,8 @@ account:
   onModifySuccess: compte mis à jour
   onModifyError: erreur lors de la modification de ton compte
   hasToModifyPassword: tu veux modifier ton mot de passe ?
+  logout: se déconnecter
+links:
+  products: mes produits
+  order: mes commandes
+  account: mon compte
