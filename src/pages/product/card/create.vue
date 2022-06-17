@@ -15,7 +15,7 @@ const { mutate: createcard } = useMutation(CREATE_CARD, {
       <CretaeCrad style="height: 500px; max-width: 500px" />
     </div>
 
-    <div style="flex: 1" class="self-center">
+    <div style="flex: 0.5" class="self-center">
       <FormCard />
     </div>
 
