@@ -9,7 +9,7 @@ const props = defineProps<{
 const password = ref(props.password)
 const repeatedPassword = $ref('')
 const emit = defineEmits(['update'])
-watch(password, () => emit('update', password))
+watch(password, () => emit('update', password.value))
 </script>
 
 <template>

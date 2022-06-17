@@ -8,7 +8,7 @@ const isPhoneValid = $computed(() => phone.value.match(
   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
 ))
 const emit = defineEmits(['update'])
-watch(phone, () => emit('update', phone))
+watch(phone, () => emit('update', phone.value))
 </script>
 
 <template>

@@ -9,7 +9,6 @@ export const useAccount: CreateGlobalStateReturn<RemovableRef<Account>> = create
     username: '',
     email: '',
     phone: '',
-    password: '',
     __typename: 'User',
   }),
 )
