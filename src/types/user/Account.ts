@@ -6,5 +6,4 @@ export interface Account extends Graphql {
   username: string
   email: string
   phone: string
-  password: string
 }
