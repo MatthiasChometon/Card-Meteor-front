@@ -3,7 +3,8 @@ import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
 import { Dialog, Notify, Quasar } from 'quasar'
 import { DefaultApolloClient } from '@vue/apollo-composable'
-import { ApolloClient, InMemoryCache } from '@apollo/client/core'
+import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client/core'
+import { setContext } from '@apollo/client/link/context'
 import App from './App.vue'
 
 import '@quasar/extras/material-icons/material-icons.css'
@@ -11,15 +12,29 @@ import 'quasar/src/css/index.sass'
 import '@quasar/extras/roboto-font/roboto-font.css'
 
 const routes = setupLayouts(generatedRoutes)
-const cache = new InMemoryCache()
+const cache = new InMemoryCache({
+  addTypename: true,
+})
+
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3000/graphql',
+})
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('accessToken')
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  }
+})
 
 const apolloClient = new ApolloClient({
+  link: authLink.concat(httpLink),
   cache,
   uri: 'http://localhost:3000/graphql',
   defaultOptions: { mutate: { errorPolicy: 'all' } },
-  headers: {
-    authorization: `Bearer ${localStorage.getItem('accessToken') || ''}`,
-  },
 })
 
 export const createApp = ViteSSG(
