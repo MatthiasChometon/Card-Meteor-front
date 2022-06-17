@@ -4,13 +4,13 @@
     <NavbarLinks style="flex: 2;" class="justify-center content-center desktop-navbar" />
     <NavbarOptions style="flex: 1;" class="justify-end items-center no-wrap desktop-navbar" />
 
-    <div class="mobile-navbar">
-      <q-icon style="flex: 1;" color="primary" size="60px" name="menu" class="q-pa-md mobile-navbar" />
+    <div class="mobile-navbar" style="flex: 1;">
+      <BurgerMenuButton />
     </div>
     <NavbarIcon style="flex: 3;" class="mobile-navbar q-pa-md" />
     <div class="mobile-navbar">
-      <AuthenticationButton />
-      <ShoppingButton />
+      <AuthenticationButton class="q-pr-md" />
+      <ShoppingButton class="q-px-md" />
     </div>
   </q-header>
 </template>

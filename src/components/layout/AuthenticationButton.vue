@@ -3,11 +3,11 @@ import { UserRoles } from '~/enums/users/UserRoles'
 import { useConnectedUser } from '~/stores/users/connected'
 
 const { connectedUser } = useConnectedUser()
-const isUser = $computed(() => connectedUser.role === UserRoles.user)
+const isVisitor = $computed(() => connectedUser.role === UserRoles.visitor)
 </script>
 
 <template>
-  <router-link v-if="isUser" to="/shopping-cart">
-    <q-icon color="primary" size="40px" name="shopping_cart" class="icon" />
+  <router-link v-if="isVisitor" to="/authentication/login">
+    <q-icon color="primary" name="account_circle" class="q-pl-md icon home-icon" />
   </router-link>
 </template>

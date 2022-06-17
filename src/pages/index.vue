@@ -30,22 +30,17 @@ onUnmounted(() => {
     background: transparent !important;
   }
 
-  .home-links,
-  .q-icon {
-    color: white !important;
+  .home-links, .home-icon {
     text-shadow: 4px 0px 20px black;
+  }
+
+  .home-icon, .home-links, .q-field--float .q-field__label,
+  .q-field--auto-height.q-field--labeled .q-field__native {
+    color: white !important;
   }
 
   .home-not-display {
     display: none !important;
-  }
-
-  .q-field--float .q-field__label {
-    color: white;
-  }
-
-  .q-field--auto-height.q-field--labeled .q-field__native {
-    color: white;
   }
 
   .q-field--outlined .q-field__control:before {

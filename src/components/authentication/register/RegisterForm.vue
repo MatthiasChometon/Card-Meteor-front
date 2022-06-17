@@ -21,10 +21,6 @@ const newUser = $ref({
   email: '',
 })
 
-const repeatedPassword = $ref('')
-const isPasswordVisible: boolean = $ref(false)
-const isRepeatedPasswordVisible: boolean = $ref(false)
-
 onDone((result) => {
   const variables = { username: newUser.username }
   sendNotification(result, { path: 'register.onSuccess', variables }, { path: 'register.onError' })
@@ -34,15 +30,6 @@ onDone((result) => {
   setConnectedUser(result.data.register)
   router.replace('/')
 })
-
-const isEmailValid = $computed(() => newUser.email.match(
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-))
-
-const isPhoneValid = $computed(() => newUser.phone.match(
-  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
-))
-
 </script>
 
 <template>
@@ -66,42 +53,9 @@ const isPhoneValid = $computed(() => newUser.phone.match(
         :rules="[val => val && val.length > 0 || t('form.rulesError.empty', { key: t('register.username') })]"
       />
 
-      <q-input
-        v-model="newUser.email" outlined :label="t('register.email')" lazy-rules
-        :rules="[val => val && isEmailValid || t('form.rulesError.')]"
-      />
-
-      <q-input
-        v-model="newUser.phone" outlined :label="t('register.phone')" lazy-rules
-        :rules="[val => val && isPhoneValid || t('form.rulesError.phoneNotValid', { key: t('register.phone') })]"
-      />
-
-      <q-input
-        v-model="newUser.password"
-        :rules="[val => val && val.length > 6 || t('form.rulesError.empty', { key: t('register.password') })]"
-        lazy-rules outlined :type="isPasswordVisible ? 'text' : 'password'" :label="t('register.password')"
-      >
-        <template #append>
-          <q-icon
-            :name="isPasswordVisible ? 'visibility' : 'visibility_off'" class="cursor-pointer"
-            @click="isPasswordVisible = !isPasswordVisible"
-          />
-        </template>
-      </q-input>
-
-      <q-input
-        v-model="repeatedPassword" outlined :label="t('register.repeatedPassword')"
-        lazy-rules
-        :rules="[val => val && val === newUser.password || t('form.rulesError.repeatedPasswordNotValid')]"
-        :type="isRepeatedPasswordVisible ? 'text' : 'password'"
-      >
-        <template #append>
-          <q-icon
-            :name="isRepeatedPasswordVisible ? 'visibility' : 'visibility_off'" class="cursor-pointer"
-            @click="isRepeatedPasswordVisible = !isRepeatedPasswordVisible"
-          />
-        </template>
-      </q-input>
+      <EmailInput :email="newUser.email" @update="(email) => newUser.email = email" />
+      <PhoneInput :phone="newUser.phone" @update="(phone) => newUser.phone = phone" />
+      <PasswordConfirmationInput :password="newUser.password" @update="(password) => newUser.password = password" />
 
       <q-card-actions align="center">
         <q-btn :label="t('register.title')" type="submit" color="primary" />
