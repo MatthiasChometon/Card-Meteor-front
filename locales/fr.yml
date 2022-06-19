@@ -68,6 +68,53 @@ form:
 card:
   onCreationSuccess: ta commande %{trackingNumber} a été crée
   onCreationError: erreur lors de la création de ta commande
+  create:
+    title: votre produit
+    name: nom
+    attribute: attribut
+    attributes:
+      earth: terre
+      water: eau
+      fire: feu
+      wind: vent
+      light: lumière
+      dark: ténèbres
+      divine: divin
+    races:
+      warrior: guerrier
+      spellcaster: magicien
+      fairy: fée
+      fiend: démon
+      zombie: zombie
+      machine: machine
+      aqua: aqua
+      pyro: pyro
+      rock: rocher
+    types:
+      empty: vide
+      ritual: rituel
+      fusion: fusion
+      synchro: synchro
+      xyz: xyz
+    level: niveau
+    attack: attaque
+    defense: defense
+    race: race
+    hasEffect: possède un effet
+    description: description
+    archetype: archétype
+    backgroundPicture: image centrale
+    type: type
+    limitation: limitation
+    serialNumber: numéro de série
+    edition: édition
+    editor: éditeur
+    comment:
+      title: historique des propositions
+      empty: vous n'avez pas encore proposé cette carte
+      validated: validée
+      notValidated: modification(s) à faire
+    button: proposer ma carte
 not-found: Page non trouvée
 homepage:
   presentation: Meteor Card est un jeu de carte créé par la communauté. Tu peux créer et jouer tes propres cartes.
@@ -86,3 +133,4 @@ links:
   products: mes produits
   order: mes commandes
   account: mon compte
+
