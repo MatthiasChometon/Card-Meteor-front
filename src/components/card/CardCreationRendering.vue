@@ -13,7 +13,7 @@ const backgroundPicture = computed(() => new URL(`../../assets/card-templates/${
 </script>
 
 <template>
-  <q-img :src="backgroundPicture" class="card-creation-rendering-picture">
+  <q-img id="cardCreation" :src="backgroundPicture" class="card-creation-rendering-picture">
     <div
       style="background: transparent !important; height: 100%; padding: 0px !important; width: 100%;"
       class="flex column"
