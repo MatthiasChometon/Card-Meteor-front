@@ -1,4 +1,5 @@
 import type { Graphql } from '../graphql/Graphql'
+import type { FileInput } from '../FileInput'
 import type { Attribute } from '~/enums/card/Attribute'
 import type { Race } from '~/enums/card/Race'
 import type { Type } from '~/enums/card/Type'
@@ -15,8 +16,8 @@ export interface InCreationCard extends Graphql {
   edition: string
   editor: string
   limitation: number
-  coverPicture: string
-  backgroundPicture: string
+  coverPicture: FileInput
+  backgroundPicture: FileInput
   serialNumber: number
   archetype: string
   type: Type
