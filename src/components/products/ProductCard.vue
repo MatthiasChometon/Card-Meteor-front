@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ProductForList } from '../../types/product/list/ProductForList'
+import { useCardCoverPicture } from '~/composables/useCardCoverPicture'
 const { t } = useI18n()
 
 const props = defineProps<{
@@ -7,6 +8,8 @@ const props = defineProps<{
   isShoppingList?: boolean
 }>()
 const emit = defineEmits(['add', 'remove', 'selectNumber'])
+
+const { picture } = useCardCoverPicture(props.product.coverPicture)
 
 const inStock = 10
 let numberSelected = $ref(props.product.number)
@@ -24,7 +27,7 @@ function remove() {
 
 <template>
   <q-card class="q-ma-md flex justify-center content-center column alig">
-    <q-img class="q-ma-md product-card-picture" fit="contain" style="width: 100%;" :src="props.product.coverPicture" />
+    <q-img class="q-ma-md product-card-picture" fit="contain" style="width: 100%;" :src="picture" />
     <q-card-section class="flex column justify-between">
       <div class="text-h5 flex row" style="flex: 2;">
         <div style="flex: 1;" class="q-pl-md">
