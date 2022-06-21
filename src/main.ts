@@ -16,7 +16,7 @@ const cache = new InMemoryCache({
   addTypename: true,
 })
 
-const httpLink = createHttpLink({
+const link = createUploadLink({
   uri: 'http://localhost:3000/graphql',
 })
 
