@@ -1,1 +1,1 @@
-export type FileInput = any[] | File | FileList | null | undefined
+export type FileInput = any[] | File | FileList | null | undefined | string
