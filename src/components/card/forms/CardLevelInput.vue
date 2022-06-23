@@ -6,5 +6,5 @@ const levels = [...Array(14).keys()]
 </script>
 
 <template>
-  <q-select v-model="inCreationCard.level" class="q-pa-sm" outlined :options="levels" :label="t('card.create.level')" />
+  <q-select v-model.number="inCreationCard.level" class="q-pa-sm" outlined :options="levels" :label="t('card.create.level')" />
 </template>
