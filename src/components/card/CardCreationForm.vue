@@ -51,10 +51,6 @@ const inCreationCard = useInCreationCard()
           v-model="inCreationCard.edition" class="q-pa-sm" outlined :label="t('card.create.edition')"
           :rules="[val => val && val.length > 0 || '']" :maxlength="30"
         />
-        <q-input
-          v-model="inCreationCard.editor" class="q-pa-sm" outlined :label="t('card.create.editor')"
-          :rules="[val => val && val.length > 0 || '']" :maxlength="30"
-        />
       </div>
     </q-form>
   </div>
