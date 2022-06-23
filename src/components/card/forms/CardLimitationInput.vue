@@ -7,7 +7,7 @@ const limitation = [...Array(4).keys()]
 
 <template>
   <q-select
-    v-model="inCreationCard.limitation" class="q-pa-sm" outlined :options="limitation"
+    v-model.number="inCreationCard.limitation" class="q-pa-sm" outlined :options="limitation"
     :label="t('card.create.limitation')"
   />
 </template>
