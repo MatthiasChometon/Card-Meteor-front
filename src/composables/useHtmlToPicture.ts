@@ -3,7 +3,7 @@ import type { Ref } from 'vue'
 
 export function useHtmlToPicture(htmlId: string) {
   const picturePath = ref('')
-  const picture: Ref<File> = ref(new File([], 'new.svg'))
+  const picture: Ref<File> = ref(new File([], 'new.png'))
 
   const getPicturePath = async() => {
     const htmlToConvert = document.getElementById(htmlId)
