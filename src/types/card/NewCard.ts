@@ -4,7 +4,7 @@ import type { Attribute } from '~/enums/card/Attribute'
 import type { Race } from '~/enums/card/Race'
 import type { Type } from '~/enums/card/Type'
 
-export interface InCreationCard extends Graphql {
+export interface NewCard extends Graphql {
   name: string
   level: number
   attribute: Attribute
