@@ -1,11 +1,10 @@
-import type { CreateGlobalStateReturn, RemovableRef } from '@vueuse/core'
-import { createGlobalState } from '@vueuse/core'
+import { createGlobalState, useStorage } from '@vueuse/core'
+import type { NewCard } from '../../types/card/NewCard'
 import { Attribute } from '~/enums/card/Attribute'
 import { Race } from '~/enums/card/Race'
 import { Type } from '~/enums/card/Type'
-import type { InCreationCard } from '~/types/card/NewCard'
 
-export const initialCard: InCreationCard = {
+const newCard: NewCard = {
   name: 'Fluffal Cat',
   level: 12,
   attribute: Attribute.earth,
@@ -24,6 +23,6 @@ export const initialCard: InCreationCard = {
   __typename: 'Card',
 }
 
-export const useInCreationCard: CreateGlobalStateReturn<RemovableRef<InCreationCard>> = createGlobalState(
-  () => useStorage('initialCard', initialCard),
+export const useInCreationCard = createGlobalState(
+  () => useStorage('newCard', newCard),
 )
