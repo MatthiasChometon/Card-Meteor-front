@@ -6,6 +6,7 @@ import { useInCreationCard } from '~/stores/card/create'
 import { useHtmlToPicture } from '~/composables/useHtmlToPicture'
 
 const { sendNotification } = useNotification()
+const router = useRouter()
 const inCreationCard = useInCreationCard()
 const { getPicturePath, picture: cardPicture } = useHtmlToPicture('cardCreation')
 const { mutate: createCard, onDone } = useMutation(CREATE_CARD, {
@@ -18,11 +19,13 @@ async function create() {
   createCard({
     newCard,
     coverPicture: cardPicture.value,
-    backgroundPicture: inCreationCard.value.backgroundPicture,
+    backgroundPicture,
   })
 }
 onDone((result) => {
-  sendNotification(result, { path: 'register.onSuccess' }, { path: 'register.onError' })
+  sendNotification(result, { path: 'card.onCreationSuccess' }, { path: 'card.onCreationError' })
+  const id = result.data.createCard.id
+  router.replace(`/card/${id}`)
 })
 defineEmits(['clickValidateCard'])
 </script>
