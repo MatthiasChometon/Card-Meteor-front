@@ -36,11 +36,7 @@ const inCreationCard = useInCreationCard()
           v-model="inCreationCard.archetype" class="q-pa-sm" outlined :label="t('card.create.archetype')"
           :maxlength="30"
         />
-        <q-file v-model="inCreationCard.backgroundPicture" class="q-pa-sm" outlined :label="t('card.create.backgroundPicture')">
-          <template #prepend>
-            <q-icon name="attach_file" />
-          </template>
-        </q-file>
+        <CardBackgroundPictureInput />
         <CardTypeInput />
         <CardLimitationInput />
         <q-input
