@@ -9,7 +9,7 @@ mutation createCard(
     createCardInput: $newCard
     backgroundPicture: $backgroundPicture
     coverPicture: $coverPicture) {
-      name
+      id
   }
 }
 `
