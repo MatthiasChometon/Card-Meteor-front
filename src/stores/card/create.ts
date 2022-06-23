@@ -15,7 +15,6 @@ export const initialCard: InCreationCard = {
   hasEffect: true,
   description: 'If this card is sent to Graveyard as a Fusion Material for a Fusion Summon: You can target 1 "Polymerization" in your Graveyard; add it to your hand? You can only use this effect of "Fluffal Car" once per turn.',
   edition: 'NECH-EN019',
-  editor: 'KAZUKI TAKAHASHI',
   limitation: 3,
   coverPicture: null,
   backgroundPicture: null,
