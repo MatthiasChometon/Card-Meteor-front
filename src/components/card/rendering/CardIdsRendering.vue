@@ -1,6 +1,13 @@
 <script setup lang="ts">
+import { UserRoles } from '~/enums/users/UserRoles'
 import { useInCreationCard } from '~/stores/card/create'
+import { useConnectedUser } from '~/stores/users/connected'
+
+const { t } = useI18n()
 const inCreationCard = useInCreationCard()
+const { connectedUser } = useConnectedUser()
+const isUser = computed(() => connectedUser.role === UserRoles.user)
+const editor = computed(() => isUser ? connectedUser.username : t('card.create.editorMessage'))
 </script>
 
 <template>
@@ -13,7 +20,7 @@ const inCreationCard = useInCreationCard()
         {{ inCreationCard.serialNumber }}
       </div>
       <div class="text-caption" style="font-size: 0.43rem;">
-        {{ inCreationCard.editor }}
+        {{ editor }}
       </div>
     </div>
   </div>
