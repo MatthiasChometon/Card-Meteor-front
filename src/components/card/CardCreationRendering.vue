@@ -8,12 +8,12 @@ const typeForPicture = computed(() => {
     ? emptyMonsterType
     : inCreationCard.value.type
 })
-const backgroundPicture = computed(() => new URL(`../../assets/card-templates/${typeForPicture.value}.png`, import.meta.url).href)
+const templatePicture = computed(() => new URL(`../../assets/card-templates/${typeForPicture.value}.png`, import.meta.url).href)
 
 </script>
 
 <template>
-  <q-img id="cardCreation" :src="backgroundPicture" class="card-creation-rendering-picture">
+  <q-img id="cardCreation" :src="templatePicture" class="card-creation-rendering-picture">
     <div
       style="background: transparent !important; height: 100%; padding: 0px !important; width: 100%;"
       class="flex column"
