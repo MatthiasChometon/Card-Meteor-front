@@ -65,9 +65,14 @@ form:
     passwordTooShort: your password must contain at least %{passwordLength} characters
     repeatedPasswordNotValid: passwords do not match
     emailNotValid: this is not a valid email
-card:
+order:
   onCreationSuccess: your order %{trackingNumber} has been created
   onCreationError: error when creating order
+card:
+  onUpdateSuccess: your card has been updated. It will be published once we have validated it
+  onUpdateError: error, we could not update your card
+  creationSuccess: your card has been created. It will be published once we have validated it
+  creationError: error, we could not create your card
   create:
     title: your product
     name: name
@@ -108,7 +113,7 @@ card:
     limitation: limitation
     serialNumber: serial number
     edition: edition
-    editor: editor
+    editorMessage: login to see your username here
     comment:
       title: proposal history
       empty: you have not propose this card yet

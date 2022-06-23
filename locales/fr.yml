@@ -65,9 +65,14 @@ form:
     passwordTooShort: ton mot de passe doit contenir au moins %{passwordLength} caractères
     repeatedPasswordNotValid: les mots de passes ne correspondent pas
     emailNotValid: cet email n'est pas valide
-card:
+order:
   onCreationSuccess: ta commande %{trackingNumber} a été crée
   onCreationError: erreur lors de la création de ta commande
+card:
+  onUpdateSuccess: ta carte a bien été mise à jour. Elle sera publié une fois que nous l'aurons validée
+  onUpdateError: erreur, nous n'avons pas pu mettre à jour ta carte
+  creationSuccess: ta carte a été créée. Elle sera publié une fois que nous l'aurons validée
+  creationError: erreur, nous n'avons pas pu créer ta carte
   create:
     title: votre produit
     name: nom
@@ -108,7 +113,7 @@ card:
     limitation: limitation
     serialNumber: numéro de série
     edition: édition
-    editor: éditeur
+    editorMessage: connectes toi pour voir ton pseudo ici
     comment:
       title: historique des propositions
       empty: vous n'avez pas encore proposé cette carte
