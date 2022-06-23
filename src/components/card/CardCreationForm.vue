@@ -44,8 +44,8 @@ const inCreationCard = useInCreationCard()
         <CardTypeInput />
         <CardLimitationInput />
         <q-input
-          v-model="inCreationCard.serialNumber" class="q-pa-sm" outlined :label="t('card.create.serialNumber')"
-          :maxlength="30"
+          v-model.number="inCreationCard.serialNumber" class="q-pa-sm" outlined :label="t('card.create.serialNumber')"
+          :maxlength="30" type="number"
         />
         <q-input
           v-model="inCreationCard.edition" class="q-pa-sm" outlined :label="t('card.create.edition')"
