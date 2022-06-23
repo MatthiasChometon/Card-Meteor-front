@@ -7,7 +7,7 @@ const { t } = useI18n()
 const inCreationCard = useInCreationCard()
 const { connectedUser } = useConnectedUser()
 const isUser = computed(() => connectedUser.role === UserRoles.user)
-const editor = computed(() => isUser ? connectedUser.username : t('card.create.editorMessage'))
+const editor = computed(() => isUser.value ? connectedUser.username : t('card.create.editorMessage'))
 </script>
 
 <template>
