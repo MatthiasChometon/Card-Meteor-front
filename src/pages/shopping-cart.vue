@@ -8,7 +8,7 @@ const router = useRouter()
 onDone((result) => {
   const trackingNumber = result.data?.createOrder?.trackingNumber
   const variables = { trackingNumber }
-  sendNotification(result, { path: 'card.onCreationSuccess', variables }, { path: 'card.onCreationError' })
+  sendNotification(result, { path: 'order.onCreationSuccess', variables }, { path: 'order.onCreationError' })
   if (result.errors)
     return
   router.replace('/product/list')

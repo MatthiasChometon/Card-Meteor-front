@@ -3,8 +3,9 @@ import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
 import { Dialog, Notify, Quasar } from 'quasar'
 import { DefaultApolloClient } from '@vue/apollo-composable'
-import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client/core'
+import { ApolloClient, InMemoryCache } from '@apollo/client/core'
 import { setContext } from '@apollo/client/link/context'
+import { createUploadLink } from 'apollo-upload-client'
 import App from './App.vue'
 
 import '@quasar/extras/material-icons/material-icons.css'
@@ -15,9 +16,10 @@ const routes = setupLayouts(generatedRoutes)
 const cache = new InMemoryCache({
   addTypename: true,
 })
+const uri = `${import.meta.env.VITE_GRAPHQL_URL}/graphql`
 
-const httpLink = createHttpLink({
-  uri: 'http://localhost:3000/graphql',
+const link = createUploadLink({
+  uri,
 })
 
 const authLink = setContext((_, { headers }) => {
@@ -31,9 +33,9 @@ const authLink = setContext((_, { headers }) => {
 })
 
 const apolloClient = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: authLink.concat(link),
   cache,
-  uri: 'http://localhost:3000/graphql',
+  uri,
   defaultOptions: { mutate: { errorPolicy: 'all' } },
 })
 

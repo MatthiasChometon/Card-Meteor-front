@@ -14,7 +14,7 @@ const links: {
     text: 'navbar.products',
   },
   {
-    page: '',
+    page: '/card/create',
     text: 'navbar.createMyProduct',
   },
 ])

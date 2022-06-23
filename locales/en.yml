@@ -65,9 +65,61 @@ form:
     passwordTooShort: your password must contain at least %{passwordLength} characters
     repeatedPasswordNotValid: passwords do not match
     emailNotValid: this is not a valid email
-card:
+order:
   onCreationSuccess: your order %{trackingNumber} has been created
   onCreationError: error when creating order
+card:
+  onUpdateSuccess: your card has been updated. It will be published once we have validated it
+  onUpdateError: error, we could not update your card
+  onCreationSuccess: your card has been created. It will be published once we have validated it
+  onCreationError: error, we could not create your card
+  create:
+    title: your product
+    name: name
+    attribute: attribute
+    attributes:
+      earth: earth
+      water: water
+      fire: fire
+      wind: wind
+      light: light
+      dark: dark
+      divine: divine
+    races:
+      warrior: warrior
+      spellcaster: spellcaster
+      fairy: fairy
+      fiend: fiend
+      zombie: zombie
+      machine: machine
+      aqua: aqua
+      pyro: pyro
+      rock: rock
+    types:
+      empty: empty
+      ritual: ritual
+      fusion: fusion
+      synchro: synchro
+      xyz: xyz
+    level: stars
+    attack: attack
+    defense: defense
+    race: race
+    hasEffect: has an effect
+    description: description
+    archetype: archetype
+    backgroundPicture: main picture
+    type: type
+    limitation: limitation
+    serialNumber: serial number
+    edition: edition
+    editorMessage: login to see your username here
+    comment:
+      title: proposal history
+      empty: you have not propose this card yet
+      validated: validated
+      notValidated: change(s) to make
+    button: propose my card
 not-found: Not found
 homepage:
   presentation: Meteor Card is a community-created card game. You can create and play your own cards.

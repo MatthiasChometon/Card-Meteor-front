@@ -65,9 +65,61 @@ form:
     passwordTooShort: ton mot de passe doit contenir au moins %{passwordLength} caractères
     repeatedPasswordNotValid: les mots de passes ne correspondent pas
     emailNotValid: cet email n'est pas valide
-card:
+order:
   onCreationSuccess: ta commande %{trackingNumber} a été crée
   onCreationError: erreur lors de la création de ta commande
+card:
+  onUpdateSuccess: ta carte a bien été mise à jour. Elle sera publié une fois que nous l'aurons validée
+  onUpdateError: erreur, nous n'avons pas pu mettre à jour ta carte
+  onCreationSuccess: ta carte a été créée. Elle sera publié une fois que nous l'aurons validée
+  onCreationError: erreur, nous n'avons pas pu créer ta carte
+  create:
+    title: votre produit
+    name: nom
+    attribute: attribut
+    attributes:
+      earth: terre
+      water: eau
+      fire: feu
+      wind: vent
+      light: lumière
+      dark: ténèbres
+      divine: divin
+    races:
+      warrior: guerrier
+      spellcaster: magicien
+      fairy: fée
+      fiend: démon
+      zombie: zombie
+      machine: machine
+      aqua: aqua
+      pyro: pyro
+      rock: rocher
+    types:
+      empty: vide
+      ritual: rituel
+      fusion: fusion
+      synchro: synchro
+      xyz: xyz
+    level: niveau
+    attack: attaque
+    defense: defense
+    race: race
+    hasEffect: possède un effet
+    description: description
+    archetype: archétype
+    backgroundPicture: image centrale
+    type: type
+    limitation: limitation
+    serialNumber: numéro de série
+    edition: édition
+    editorMessage: connectes toi pour voir ton pseudo ici
+    comment:
+      title: historique des propositions
+      empty: vous n'avez pas encore proposé cette carte
+      validated: validée
+      notValidated: modification(s) à faire
+    button: proposer ma carte
 not-found: Page non trouvée
 homepage:
   presentation: Meteor Card est un jeu de carte créé par la communauté. Tu peux créer et jouer tes propres cartes.
@@ -86,3 +138,4 @@ links:
   products: mes produits
   order: mes commandes
   account: mon compte
+

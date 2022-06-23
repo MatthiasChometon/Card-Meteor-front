@@ -16,7 +16,7 @@ export const useProductListFilter = defineStore('productListFilter', () => {
     },
     filterBy: {
       name: '',
-      step: 3,
+      step: 2,
       pagination: {
         start: paginationParam.start,
         end: paginationParam.end,
