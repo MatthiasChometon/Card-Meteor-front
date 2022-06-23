@@ -14,7 +14,6 @@ export interface InCreationCard extends Graphql {
   hasEffect: boolean
   description: string
   edition: string
-  editor: string
   limitation: number
   coverPicture: FileInput
   backgroundPicture: FileInput
