@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ProductForList } from '../../types/product/list/ProductForList'
-import { useCardCoverPicture } from '~/composables/useCardCoverPicture'
+import { useServerPicture } from '~/composables/useServerPicture'
 const { t } = useI18n()
 
 const props = defineProps<{
@@ -8,8 +8,7 @@ const props = defineProps<{
   isShoppingList?: boolean
 }>()
 const emit = defineEmits(['add', 'remove', 'selectNumber'])
-
-const { picture } = useCardCoverPicture(props.product.coverPicture)
+const { picture } = useServerPicture('cover', props.product.coverPicture)
 
 const inStock = 10
 let numberSelected = $ref(props.product.number)
