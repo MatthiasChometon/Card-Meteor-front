@@ -71,8 +71,8 @@ order:
 card:
   onUpdateSuccess: your card has been updated. It will be published once we have validated it
   onUpdateError: error, we could not update your card
-  creationSuccess: your card has been created. It will be published once we have validated it
-  creationError: error, we could not create your card
+  onCreationSuccess: your card has been created. It will be published once we have validated it
+  onCreationError: error, we could not create your card
   create:
     title: your product
     name: name

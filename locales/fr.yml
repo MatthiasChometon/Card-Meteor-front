@@ -71,8 +71,8 @@ order:
 card:
   onUpdateSuccess: ta carte a bien été mise à jour. Elle sera publié une fois que nous l'aurons validée
   onUpdateError: erreur, nous n'avons pas pu mettre à jour ta carte
-  creationSuccess: ta carte a été créée. Elle sera publié une fois que nous l'aurons validée
-  creationError: erreur, nous n'avons pas pu créer ta carte
+  onCreationSuccess: ta carte a été créée. Elle sera publié une fois que nous l'aurons validée
+  onCreationError: erreur, nous n'avons pas pu créer ta carte
   create:
     title: votre produit
     name: nom
