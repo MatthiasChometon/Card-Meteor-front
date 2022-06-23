@@ -1,4 +1,4 @@
-import { toSvg } from 'html-to-image'
+import { toPng } from 'html-to-image'
 import type { Ref } from 'vue'
 
 export function useHtmlToPicture(htmlId: string) {
@@ -8,12 +8,12 @@ export function useHtmlToPicture(htmlId: string) {
   const getPicturePath = async() => {
     const htmlToConvert = document.getElementById(htmlId)
     if (htmlToConvert !== null) {
-      picturePath.value = await toSvg(htmlToConvert)
+      picturePath.value = await toPng(htmlToConvert)
         .catch((error) => {
           console.error('oops, something went wrong!', error)
           return ''
         })
-      picture.value = await urltoFile(picturePath.value, 'new.svg', 'image/svg')
+      picture.value = await urltoFile(picturePath.value, 'new.png', 'image/png')
     }
   }
 
