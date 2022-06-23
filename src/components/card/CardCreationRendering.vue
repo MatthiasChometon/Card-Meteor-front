@@ -20,7 +20,7 @@ const backgroundPicture = computed(() => new URL(`../../assets/card-templates/${
     >
       <CardTitleRendering />
       <CardStarsRendering />
-      <CardCoverPictureRendering />
+      <CardBackgroundPictureRendering />
       <CardEditionRendering />
       <CardDescriptionRendering />
       <CardIdsRendering />
