@@ -1,39 +1,13 @@
 <script setup lang="ts">
-const { t } = useI18n()
-
-const links: {
-  page: string
-  text: string
-}[] = $ref([
-  {
-    page: '/',
-    text: 'navbar.homepage',
-  },
-  {
-    page: '/product/list',
-    text: 'navbar.products',
-  },
-  {
-    page: '/card/create',
-    text: 'navbar.createMyProduct',
-  },
-])
-
+import { useLinks } from '~/composables/useLinks'
+const { visitorLinks } = useLinks()
 </script>
 
 <template>
   <div>
-    <router-link
-      v-for="link in links" :key="link.text" :to="link.page" replace
+    <Link
+      v-for="link in visitorLinks" :key="link.text" :to="link.page" :link="link"
       class="text-h6 q-pa-md q-px-md text-primary flex justify-center content-center home-links"
-    >
-      {{ t(link.text) }}
-    </router-link>
+    />
   </div>
 </template>
-
-<style lang="scss">
-a {
-  text-decoration: none;
-}
-</style>
