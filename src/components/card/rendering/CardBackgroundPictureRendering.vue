@@ -10,7 +10,7 @@ const pictureName = computed(() => {
   const isString = typeof backgroundPicture === 'string'
   return isString ? backgroundPicture : 'default.png'
 })
-const { picture } = useServerPicture('background', pictureName)
+const { picture } = useServerPicture('cards/background', pictureName)
 
 const pictureToDisplay: Ref<string> = computed(() => {
   const backgroundPicture = inCreationCard.value.backgroundPicture
