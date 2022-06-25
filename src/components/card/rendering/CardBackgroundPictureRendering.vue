@@ -8,7 +8,7 @@ const inCreationCard = useInCreationCard()
 const pictureName = computed(() => {
   const backgroundPicture = inCreationCard.value.backgroundPicture
   const isString = typeof backgroundPicture === 'string'
-  return isString ? backgroundPicture : ''
+  return isString ? backgroundPicture : 'default.png'
 })
 const { picture } = useServerPicture('background', pictureName)
 
