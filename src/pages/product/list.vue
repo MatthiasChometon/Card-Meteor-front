@@ -1,21 +1,11 @@
 <script setup lang="ts">
-import gql from 'graphql-tag'
 import { useQuery } from '@vue/apollo-composable'
+import { CARDS_LIST_QUERY } from '~/graphql/product/list'
 import { useProductListFilter } from '~/stores/products/listFilter'
 import { useShoppingCart } from '~/stores/products/shoppingCart'
 
 const { productListFilter } = useProductListFilter()
-const CARDS_LIST_QUERY = gql`
-  query getCardsWithSearch($getCardInput: GetCardInput!) {
-    cards(getCardInput: $getCardInput) {
-      id
-      name
-      archetype
-      coverPicture
-      price
-    }
-  }
-`
+
 const { result, variables } = useQuery(CARDS_LIST_QUERY, {
   getCardInput: productListFilter,
 }, { fetchPolicy: 'cache-and-network' })
