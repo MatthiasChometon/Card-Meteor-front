@@ -33,6 +33,7 @@ declare module '@vue/runtime-core' {
     EmailInput: typeof import('./components/forms/EmailInput.vue')['default']
     Footer: typeof import('./components/layout/Footer.vue')['default']
     HomePresentation: typeof import('./components/home/HomePresentation.vue')['default']
+    Link: typeof import('./components/layout/Link.vue')['default']
     LoginForm: typeof import('./components/authentication/login/LoginForm.vue')['default']
     LoginLink: typeof import('./components/authentication/login/LoginLink.vue')['default']
     LogoutButton: typeof import('./components/authentication/login/LogoutButton.vue')['default']
