@@ -113,12 +113,21 @@ card:
     serialNumber: numéro de série
     edition: édition
     editorMessage: connectes toi pour voir ton pseudo ici
-    comment:
-      title: historique des propositions
-      empty: vous n'avez pas encore proposé cette carte
-      validated: validée
-      notValidated: modification(s) à faire
+  comment:
+    title: historique des propositions
+    empty: vous n'avez pas encore proposé cette carte
+    form:
+      title: validation
+      notValidated: je ne valide pas encore cette carte
+      validated: je valide cette carte
+      sendComment: envoyer le commentaire
+      validate: valider la carte
+      comment: commentaire
     button: proposer ma carte
+    onValidationSuccess: la carte a été validée
+    onValidationError: erreur lors de la validation de la carte
+    onSendSuccess: le commentaire a été envoyé
+    onSendError: erreur lors de l'envoi du commentaire
 not-found: Page non trouvée
 homepage:
   presentation: Meteor Card est un jeu de carte créé par la communauté. Tu peux créer et jouer tes propres cartes.
@@ -137,4 +146,3 @@ links:
   products: mes produits
   order: mes commandes
   account: mon compte
-
