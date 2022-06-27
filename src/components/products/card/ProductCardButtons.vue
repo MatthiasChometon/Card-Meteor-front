@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ProductForList } from '~/types/product/list/ProductForList'
 import { ProductStep } from '~/enums/products/filter/ProductStep'
+import { useUserRole } from '~/composables/useUserRole'
 
 const props = defineProps<{
   product: ProductForList
@@ -11,6 +12,7 @@ const emit = defineEmits(['add', 'remove', 'selectNumber'])
 const inStock = 10
 let numberSelected = $ref(props.product.number)
 const selectableNumbers = [...Array(inStock).keys()].reverse()
+const { isUser, isValidator } = useUserRole()
 
 function add() {
   numberSelected++
@@ -41,7 +43,8 @@ function remove() {
         v-if="product.step === ProductStep.released" outline class="text-primary text-weight-medium" icon="add"
         round @click="add"
       />
-      <ProductCardEditButton v-if="product.step === ProductStep.beingCreated" :product-id="props.product.id" />
+      <ProductCardEditButton v-if="product.step === ProductStep.beingCreated && isUser" :product-id="props.product.id" />
+      <ProductCardCommentButton v-if="product.step === ProductStep.beingCreated && isValidator" :product-id="props.product.id" />
     </div>
   </div>
 </template>
