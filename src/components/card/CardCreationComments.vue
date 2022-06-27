@@ -17,9 +17,5 @@ defineEmits(['clickValidateCard'])
     <div v-if="comments.length > 0">
       <CardComment />
     </div>
-
-    <q-btn color="primary" class="text-primary text-weight-medium" @click="$emit('clickValidateCard')">
-      {{ t('card.create.button') }}
-    </q-btn>
   </div>
 </template>
