@@ -11,7 +11,7 @@ defineEmits(['clickValidateCard'])
     <div style="flex: 1;" class="justify-center flex content-center">
       <CardCreationForm />
     </div>
-    <div style="flex: 1;" class="justify-center flex content-center">
+    <div style="flex: 1;" class="justify-center flex content-center column">
       <CardCreationComments @click-validate-card="$emit('clickValidateCard')" />
       <q-btn color="primary" class="text-primary text-weight-medium" @click="$emit('clickValidateCard')">
         {{ t('card.create.button') }}
