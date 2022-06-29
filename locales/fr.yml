@@ -113,6 +113,7 @@ card:
     serialNumber: numéro de série
     edition: édition
     editorMessage: connectes toi pour voir ton pseudo ici
+    button: proposer ma carte
   comment:
     title: historique des propositions
     empty: vous n'avez pas encore proposé cette carte
@@ -123,7 +124,6 @@ card:
       sendComment: envoyer le commentaire
       validate: valider la carte
       comment: commentaire
-    button: proposer ma carte
     onValidationSuccess: la carte a été validée
     onValidationError: erreur lors de la validation de la carte
     onSendSuccess: le commentaire a été envoyé

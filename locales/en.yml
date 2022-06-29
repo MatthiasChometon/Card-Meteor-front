@@ -113,6 +113,7 @@ card:
     serialNumber: serial number
     edition: edition
     editorMessage: login to see your username here
+    button: propose my card
   comment:
     title: proposal history
     empty: you have not propose this card yet
@@ -123,7 +124,6 @@ card:
       sendComment: send comment
       validate: validate card
       comment: comment
-    button: propose my card
     onValidationSuccess: the card has been validated
     onValidationError: error while validating the card
     onSendSuccess: the comment has been sent
