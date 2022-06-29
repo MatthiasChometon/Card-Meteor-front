@@ -17,5 +17,9 @@ query userCard($id: Float!) {
     serialNumber
     archetype
     type
+    comments {
+      creationDate
+      comment
+    }
   }
 }`
