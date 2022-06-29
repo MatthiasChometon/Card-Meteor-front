@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useHead({
-  title: 'Vitesse',
+  title: 'Meteor Card',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
+    { name: 'description', content: 'Meteor Card' },
   ],
 })
 </script>
