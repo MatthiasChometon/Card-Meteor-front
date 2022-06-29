@@ -29,7 +29,7 @@ async function update() {
   const hasNewBackgroundPicture = backgroundPicture instanceof File
   if (hasNewBackgroundPicture)
     updateParams.backgroundPicture = backgroundPicture
-  updateCard(updateParams)
+  await updateCard(updateParams)
 }
 onDone((result) => {
   sendNotification(result, { path: 'card.onUpdateSuccess' }, { path: 'card.onUpdateError' })

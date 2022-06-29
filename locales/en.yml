@@ -21,8 +21,7 @@ product:
       label: filter by product step
       type:
         1: being created
-        2: being validated
-        3: released
+        2: released
   card:
     archetype: archetype
   shopping:
@@ -114,12 +113,21 @@ card:
     serialNumber: serial number
     edition: edition
     editorMessage: login to see your username here
-    comment:
-      title: proposal history
-      empty: you have not propose this card yet
-      validated: validated
-      notValidated: change(s) to make
+  comment:
+    title: proposal history
+    empty: you have not propose this card yet
+    form:
+      title: validation
+      notValidated: i do not validate this card yet
+      validated: i validate this card
+      sendComment: send comment
+      validate: validate card
+      comment: comment
     button: propose my card
+    onValidationSuccess: the card has been validated
+    onValidationError: error while validating the card
+    onSendSuccess: the comment has been sent
+    onSendError: error sending comment
 not-found: Not found
 homepage:
   presentation: Meteor Card is a community-created card game. You can create and play your own cards.

@@ -1,5 +1,6 @@
 import type { Graphql } from '../graphql/Graphql'
 import type { FileInput } from '../FileInput'
+import type { CardComment } from './CardComment'
 import type { Attribute } from '~/enums/card/Attribute'
 import type { Race } from '~/enums/card/Race'
 import type { Type } from '~/enums/card/Type'
@@ -20,4 +21,5 @@ export interface NewCard extends Graphql {
   serialNumber: number
   archetype: string
   type: Type
+  comments: CardComment[]
 }

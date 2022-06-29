@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useProductListFilter } from '../../../stores/products/listFilter'
 const { t } = useI18n()
-const { setEditor, productListFilter } = useProductListFilter()
+const { setEditor, setStep, productListFilter } = useProductListFilter()
 
-const isFilter = $computed({
+const isFilter = computed({
   get() {
     return !!productListFilter.filterBy.editor
   },
@@ -11,6 +11,8 @@ const isFilter = $computed({
     setEditor(newValue)
   },
 })
+
+watch(isFilter, () => isFilter.value ? setStep(undefined) : setStep(2))
 </script>
 
 <template>
