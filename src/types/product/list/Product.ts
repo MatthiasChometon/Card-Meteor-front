@@ -5,4 +5,5 @@ export interface Product {
   price: number
   archetype: string
   state: string
+  step: number
 }

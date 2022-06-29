@@ -21,8 +21,7 @@ product:
       label: filter by product step
       type:
         1: being created
-        2: being validated
-        3: released
+        2: released
   card:
     archetype: archetype
   shopping:

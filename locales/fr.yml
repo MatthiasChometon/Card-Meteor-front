@@ -20,9 +20,8 @@ product:
     step:
       label: filtrer par étape du produit
       type:
-        1: en cours de création
-        2: en cours de validation
-        3: publié
+        1: en cours de validation
+        2: publié
   card:
     archetype: archétype
   shopping:
