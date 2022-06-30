@@ -5,12 +5,14 @@ import { useServerPicture } from '~/composables/useServerPicture'
 import { GET_CARD_FOR_COMMENT } from '~/graphql/card/comment/get'
 import { SEND_CARD_COMMENT } from '~/graphql/card/comment/send'
 import { VALIDATE_CARD } from '~/graphql/card/comment/validate'
+import { useCardComments } from '~/stores/card/comments'
 import { useInCreationCard } from '~/stores/card/create'
 import { useNotification } from '~/stores/notification'
 
 const { cardId } = useRouterParams<{ cardId: number }>()
 const id = Number(cardId)
 const inCreationCard = useInCreationCard()
+const comments = useCardComments()
 const router = useRouter()
 const { sendNotification } = useNotification()
 const { result, loading: isLoading } = useQuery(GET_CARD_FOR_COMMENT, { id }, { fetchPolicy: 'cache-and-network' })
@@ -22,6 +24,7 @@ watch(result, () => {
   if (data === undefined)
     return
 
+  Object.assign(comments.value, result.value.card.comments)
   Object.assign(inCreationCard.value, result.value.card)
 })
 

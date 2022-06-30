@@ -4,12 +4,14 @@ import { useHtmlToPicture } from '~/composables/useHtmlToPicture'
 import { useRouterParams } from '~/composables/useRouterParams'
 import { GET_CARD } from '~/graphql/card/get'
 import { UPDATE_CARD } from '~/graphql/card/update'
+import { useCardComments } from '~/stores/card/comments'
 import { useInCreationCard } from '~/stores/card/create'
 import { useNotification } from '~/stores/notification'
 
 const { cardId } = useRouterParams<{ cardId: number }>()
 const id = Number(cardId)
 const inCreationCard = useInCreationCard()
+const comments = useCardComments()
 const { getPicturePath, picture: cardPicture } = useHtmlToPicture('cardCreation')
 const { sendNotification } = useNotification()
 
@@ -41,6 +43,7 @@ watch(result, () => {
     return
 
   Object.assign(inCreationCard.value, result.value.userCard)
+  Object.assign(comments.value, result.value.userCard.comments)
 })
 </script>
 
