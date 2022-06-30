@@ -138,3 +138,15 @@ links:
   products: my products
   order: my orders
   account: my account
+Order:
+ pannel-encour: In progress   
+ outForDelivery: out For Delivery
+ delevery: Delevery
+ title: My Order
+ col-state: state
+ col-produce-product: Produce Product
+ col-totalPrice: total Price
+ col-shippingCostPrice: shipping Cost Price
+ col-datedelevery: Delevey date
+ col-datecreation: Creation date
+ List-Product: Products

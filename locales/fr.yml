@@ -138,4 +138,15 @@ links:
   products: mes produits
   order: mes commandes
   account: mon compte
-
+Order:
+ pannel-encour: En cours   
+ outForDelivery: En cours de livraison
+ delevery: Livré
+ title: Mes Commandes
+ col-state: état
+ col-produce-product: prix des produits
+ col-totalPrice: Prix total
+ col-shippingCostPrice: Coût d'expédition
+ col-datedelevery: Date de livraison
+ col-datecreation: Creation Date
+ List-Product: Les Produits
