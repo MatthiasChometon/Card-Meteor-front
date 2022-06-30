@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useInCreationCard } from '~/stores/card/create'
+import { useCardComments } from '~/stores/card/comments'
 
 const { t } = useI18n()
-const inCreationCard = useInCreationCard()
+const comments = useCardComments()
 </script>
 
 <template>
@@ -11,13 +11,13 @@ const inCreationCard = useInCreationCard()
       {{ t('card.comment.title') }}
     </div>
 
-    <div v-if="inCreationCard.comments === []" class="q-pa-lg text-grey text-italic">
+    <div v-if="comments?.length === 0" class="q-pa-lg text-grey text-italic">
       {{ t('card.comment.empty') }}
     </div>
 
-    <div v-if="inCreationCard?.comments?.length > 0">
+    <div v-if="comments?.length > 0">
       <CardComment
-        v-for="comment in inCreationCard.comments" :key="new Date(comment.creationDate).getTime()"
+        v-for="comment in comments" :key="new Date(comment.creationDate).getTime()"
         :comment="comment.comment" :creation-date="new Date(comment.creationDate)"
       />
     </div>

@@ -20,7 +20,6 @@ const newCard: NewCard = {
   serialNumber: 451543,
   archetype: 'Fluffal',
   type: Type.empty,
-  comments: [],
   __typename: 'Card',
 }
 
