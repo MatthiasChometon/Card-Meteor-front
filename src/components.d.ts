@@ -16,7 +16,6 @@ declare module '@vue/runtime-core' {
     CardComment: typeof import('./components/card/comment/CardComment.vue')['default']
     CardCommentDate: typeof import('./components/card/comment/CardCommentDate.vue')['default']
     CardCommentForm: typeof import('./components/card/comment/CardCommentForm.vue')['default']
-    CardCommentValid: typeof import('./components/card/comment/CardCommentValid.vue')['default']
     CardCreation: typeof import('./components/card/CardCreation.vue')['default']
     CardCreationComments: typeof import('./components/card/CardCreationComments.vue')['default']
     CardCreationForm: typeof import('./components/card/CardCreationForm.vue')['default']
