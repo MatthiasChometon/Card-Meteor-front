@@ -11,6 +11,7 @@ import { useNotification } from '~/stores/notification'
 const { cardId } = useRouterParams<{ cardId: number }>()
 const id = Number(cardId)
 const inCreationCard = useInCreationCard()
+const router = useRouter()
 const { sendNotification } = useNotification()
 const { result, loading: isLoading } = useQuery(GET_CARD_FOR_COMMENT, { id }, { fetchPolicy: 'cache-and-network' })
 const { mutate: sendComment, onDone: onCommendSend } = useMutation(SEND_CARD_COMMENT)
@@ -33,10 +34,12 @@ const { picture: pictureToDisplay } = useServerPicture('cards/cover', coverPictu
 
 onCommendSend((result) => {
   sendNotification(result, { path: 'card.comment.onSendSuccess' }, { path: 'card.comment.onSendError' })
+  router.replace('/product/list')
 })
 
 onValidatedCard((result) => {
   sendNotification(result, { path: 'card.comment.onValidationSuccess' }, { path: 'card.comment.onValidationError' })
+  router.replace('/product/list')
 })
 </script>
 
