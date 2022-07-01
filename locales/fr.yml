@@ -146,3 +146,16 @@ links:
   products: mes produits
   order: mes commandes
   account: mon compte
+orders:
+  beingDelivered: en cours de livraison
+  delivered: livrées
+  title: mes commandes
+  productsTitle: les produits
+  trackingNumber: numéro de suivi
+  deliveryDate: date de livraison
+  totalPrice: prix total
+  productsPrice: prix des produits
+  shippingCostPrice: prix de la livraison
+  creationDate : date de création
+  noDatas: pas de commandes
+  paginationLabel: commandes par page
