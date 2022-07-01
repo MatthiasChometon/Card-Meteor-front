@@ -9,7 +9,7 @@ const userLinks: Link[] = [
     text: 'links.account',
   },
   {
-    page: '/user/order',
+    page: '/user/orders',
     text: 'links.order',
   },
   {

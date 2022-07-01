@@ -146,3 +146,16 @@ links:
   products: my products
   order: my orders
   account: my account
+orders:
+  beingDelivered: being delivered
+  delivered: delivered
+  title: my orders
+  productsTitle: products
+  trackingNumber: tracking number
+  deliveryDate: delivery date
+  totalPrice: total price
+  productsPrice: products price
+  shippingCostPrice: shipping price
+  creationDate: creation date
+  noDatas: no orders
+  paginationLabel: orders per page

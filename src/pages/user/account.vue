@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useMutation } from '@vue/apollo-composable'
 import type { Ref } from '@vue/runtime-dom'
-import { GET_ACCOUNT } from '~/graphql/account/Get'
-import { MODIFY_ACCOUNT } from '~/graphql/account/Modify'
+import { GET_ACCOUNT } from '~/graphql/account/get'
+import { MODIFY_ACCOUNT } from '~/graphql/account/modify'
 import { useNotification } from '~/stores/notification'
 import { useAccount } from '~/stores/users/account'
 import { useConnectedUser } from '~/stores/users/connected'

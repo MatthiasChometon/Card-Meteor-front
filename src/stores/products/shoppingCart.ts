@@ -1,6 +1,6 @@
 import { useMutation } from '@vue/apollo-composable'
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { CREATE_ORDER } from '~/graphql/Order'
+import { CREATE_ORDER } from '~/graphql/order/create'
 import type { Product } from '~/types/product/list/Product'
 import type { PaypalPayment } from '~/types/product/shopping/PaypalPayment'
 import type { ShoppingProducts } from '~/types/product/shopping/ShoppingProducts'
