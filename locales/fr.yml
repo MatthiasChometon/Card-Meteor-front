@@ -143,6 +143,7 @@ account:
   onModifyError: erreur lors de la modification de ton compte
   hasToModifyPassword: tu veux modifier ton mot de passe ?
   logout: se déconnecter
+  onLogout: tu viens de te déconnecter
 links:
   products: mes produits
   order: mes commandes
