@@ -1,9 +1,13 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { useQuasar } from 'quasar'
 import type { ConnectedUser } from '~/types/user/ConnectedUser'
 import type { LoginResponse } from '~/types/user/LoginResponse'
 
 export const useConnectedUser = defineStore('connectedUser', () => {
   const { $patch } = useConnectedUser()
+  const router = useRouter()
+  const { t } = useI18n()
+  const $q = useQuasar()
   const connectedUser: ConnectedUser = $ref({
     role: 'visitor',
   })
@@ -14,6 +18,17 @@ export const useConnectedUser = defineStore('connectedUser', () => {
     localStorage.setItem('refreshToken', refreshToken)
   }
 
+  function logout() {
+    const visitor = {
+      role: 'visitor',
+    }
+    $patch({ connectedUser: visitor })
+    localStorage.clear()
+    router.replace('/product/list')
+    const message = t('account.onLogout')
+    $q.notify({ message, color: 'info' })
+  }
+
   function updateConnectedUser(user: ConnectedUser): void {
     $patch({ connectedUser: user })
   }
@@ -22,6 +37,7 @@ export const useConnectedUser = defineStore('connectedUser', () => {
     updateConnectedUser,
     setConnectedUser,
     connectedUser,
+    logout,
   }
 })
 

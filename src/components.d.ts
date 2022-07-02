@@ -39,7 +39,7 @@ declare module '@vue/runtime-core' {
     Link: typeof import('./components/layout/Link.vue')['default']
     LoginForm: typeof import('./components/authentication/login/LoginForm.vue')['default']
     LoginLink: typeof import('./components/authentication/login/LoginLink.vue')['default']
-    LogoutButton: typeof import('./components/authentication/login/LogoutButton.vue')['default']
+    LogoutButton: typeof import('./components/authentication/LogoutButton.vue')['default']
     MobileNavbar: typeof import('./components/layout/MobileNavbar.vue')['default']
     Navbar: typeof import('./components/layout/Navbar.vue')['default']
     NavbarIcon: typeof import('./components/layout/NavbarIcon.vue')['default']

@@ -143,6 +143,7 @@ account:
   onModifyError: error when modifying your account
   hasToModifyPassword: want to change your password ?
   logout: logout
+  onLogout: you just logged out
 links:
   products: my products
   order: my orders
