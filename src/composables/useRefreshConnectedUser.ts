@@ -35,8 +35,7 @@ export function useRefreshConnectedUser(): UseRefreshConnectedUser {
 
   useIntervalFn(() => {
     refreshConnectedUser()
-  }, refreshUserInterval)
-
+  }, refreshUserInterval.value)
   onBeforeMount(() => refreshConnectedUser())
 
   return { refreshConnectedUser }
