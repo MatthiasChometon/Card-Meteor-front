@@ -42,8 +42,9 @@ watch(result, () => {
   if (data === undefined)
     return
 
-  Object.assign(inCreationCard.value, result.value.userCard)
-  Object.assign(comments.value, result.value.userCard.comments)
+  const { comments: userCardComments, ...userCard } = result.value.userCard
+  Object.assign(inCreationCard.value, userCard)
+  Object.assign(comments.value, userCardComments)
 })
 </script>
 

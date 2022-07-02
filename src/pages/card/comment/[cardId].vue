@@ -24,8 +24,9 @@ watch(result, () => {
   if (data === undefined)
     return
 
-  Object.assign(comments.value, result.value.card.comments)
-  Object.assign(inCreationCard.value, result.value.card)
+  const { comments: userCardComments, ...userCard } = result.value.userCard
+  Object.assign(inCreationCard.value, userCard)
+  Object.assign(comments.value, userCardComments)
 })
 
 const coverPicture = computed(() => {
