@@ -1,4 +1,5 @@
-<script setup lang="ts">import { useRefreshConnectedUser } from './composables/useRefreshConnectedUser'
+<script setup lang="ts">
+import { useRefreshConnectedUser } from './composables/useRefreshConnectedUser'
 
 useHead({
   title: 'Meteor Card',
