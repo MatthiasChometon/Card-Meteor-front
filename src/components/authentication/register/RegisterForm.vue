@@ -28,7 +28,7 @@ onDone((result) => {
     return
 
   setConnectedUser(result.data.register)
-  router.replace('/')
+  router.replace('/card/create')
 })
 </script>
 

@@ -23,7 +23,7 @@ onDone((result) => {
   if (result.errors)
     return
   setConnectedUser(datas)
-  router.replace('/')
+  router.replace('/product/list')
 })
 
 </script>
