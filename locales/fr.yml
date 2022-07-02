@@ -144,6 +144,7 @@ account:
   hasToModifyPassword: tu veux modifier ton mot de passe ?
   logout: se déconnecter
   onLogout: tu viens de te déconnecter
+  onRefreshError: erreur lors de la connection à ton compte
 links:
   products: mes produits
   order: mes commandes
