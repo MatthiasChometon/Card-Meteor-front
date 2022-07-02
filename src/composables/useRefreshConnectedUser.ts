@@ -1,5 +1,4 @@
 import { useMutation } from '@vue/apollo-composable'
-import { useQuasar } from 'quasar'
 import { REFRESH } from '~/graphql/authentication/refresh'
 import { useConnectedUser } from '~/stores/users/connected'
 
@@ -8,8 +7,6 @@ interface UseRefreshConnectedUser {
 }
 
 export function useRefreshConnectedUser(): UseRefreshConnectedUser {
-  const $q = useQuasar()
-  const { t } = useI18n()
   const { setConnectedUser } = useConnectedUser()
 
   const { mutate: refreshTokens, onDone: onRefreshTokens } = useMutation(REFRESH, {
@@ -25,11 +22,8 @@ export function useRefreshConnectedUser(): UseRefreshConnectedUser {
 
   onRefreshTokens((result) => {
     const datas = result.data?.refreshTokens
-    if (result.errors) {
-      const message = t('account.onRefreshError')
-      $q.notify({ message, color: 'warning' })
+    if (result.errors)
       return
-    }
     setConnectedUser(datas)
   })
 
