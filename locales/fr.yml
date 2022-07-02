@@ -114,6 +114,7 @@ card:
     edition: édition
     editorMessage: connectes toi pour voir ton pseudo ici
     button: proposer ma carte
+    notConnected: il ne te reste plus qu'à t'authentifier
   comment:
     title: historique des propositions
     empty: vous n'avez pas encore proposé cette carte
