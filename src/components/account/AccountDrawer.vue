@@ -12,7 +12,7 @@ const isOpen = useAccountButton()
       <AccountLinks />
     </div>
     <div class="flex q-pa-lg q-ma-lg justify-center">
-      <LogoutButton @click-logout="isOpen = !isOpen" />
+      <LogoutButton />
     </div>
   </q-drawer>
 </template>
