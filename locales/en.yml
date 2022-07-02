@@ -144,6 +144,7 @@ account:
   hasToModifyPassword: want to change your password ?
   logout: logout
   onLogout: you just logged out
+  onRefreshError: error when logging into your account
 links:
   products: my products
   order: my orders

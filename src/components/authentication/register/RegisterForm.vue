@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useMutation } from '@vue/apollo-composable'
+import { REGISTER } from '~/graphql/authentication/register'
 import { useNotification } from '~/stores/notification'
 import { useConnectedUser } from '~/stores/users/connected'
-import { REGISTER } from '~/graphql/register'
 const { t } = useI18n()
 const { sendNotification } = useNotification()
 const { setConnectedUser } = useConnectedUser()

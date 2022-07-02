@@ -144,6 +144,7 @@ account:
   hasToModifyPassword: tu veux modifier ton mot de passe ?
   logout: se déconnecter
   onLogout: tu viens de te déconnecter
+  onRefreshError: erreur lors de la connection à ton compte
 links:
   products: mes produits
   order: mes commandes
@@ -158,6 +159,6 @@ orders:
   totalPrice: prix total
   productsPrice: prix des produits
   shippingCostPrice: prix de la livraison
-  creationDate : date de création
+  creationDate: date de création
   noDatas: pas de commandes
   paginationLabel: commandes par page
