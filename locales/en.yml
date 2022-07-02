@@ -114,6 +114,7 @@ card:
     edition: edition
     editorMessage: login to see your username here
     button: propose my card
+    notConnected: all you have to do is authenticate
   comment:
     title: proposal history
     empty: you have not propose this card yet

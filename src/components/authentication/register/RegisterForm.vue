@@ -2,7 +2,7 @@
 import { useMutation } from '@vue/apollo-composable'
 import { useNotification } from '~/stores/notification'
 import { useConnectedUser } from '~/stores/users/connected'
-import { REGISTER } from '~/graphql/Register'
+import { REGISTER } from '~/graphql/register'
 const { t } = useI18n()
 const { sendNotification } = useNotification()
 const { setConnectedUser } = useConnectedUser()
@@ -28,7 +28,7 @@ onDone((result) => {
     return
 
   setConnectedUser(result.data.register)
-  router.replace('/')
+  router.replace('/card/create')
 })
 </script>
 

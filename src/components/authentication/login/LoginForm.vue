@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useMutation } from '@vue/apollo-composable'
 import type { LoginInput } from '~/types/user/LoginInput'
-import { LOGIN } from '~/graphql/Login'
+import { LOGIN } from '~/graphql/login'
 import { useNotification } from '~/stores/notification'
 import { useConnectedUser } from '~/stores/users/connected'
 const { t } = useI18n()
@@ -23,7 +23,7 @@ onDone((result) => {
   if (result.errors)
     return
   setConnectedUser(datas)
-  router.replace('/')
+  router.replace('/product/list')
 })
 
 </script>

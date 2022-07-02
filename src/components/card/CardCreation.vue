@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { t } = useI18n()
 defineEmits(['clickValidateCard'])
 </script>
 
@@ -12,10 +11,8 @@ defineEmits(['clickValidateCard'])
       <CardCreationForm />
     </div>
     <div style="flex: 1;" class="justify-center flex content-center column">
-      <CardCreationComments @click-validate-card="$emit('clickValidateCard')" />
-      <q-btn color="primary" class="text-primary text-weight-medium" @click="$emit('clickValidateCard')">
-        {{ t('card.create.button') }}
-      </q-btn>
+      <CardCreationComments />
+      <CardCreationValidateButton @click-validate-card="$emit('clickValidateCard')" />
     </div>
   </div>
 </template>
