@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { useMutation } from '@vue/apollo-composable'
 import type { Ref } from '@vue/runtime-dom'
 import { GET_ACCOUNT } from '~/graphql/account/get'
@@ -72,4 +72,8 @@ onModifyDone((result) => {
       </q-card-actions>
     </q-form>
   </div>
+</template> -->
+
+<template>
+  test
 </template>
