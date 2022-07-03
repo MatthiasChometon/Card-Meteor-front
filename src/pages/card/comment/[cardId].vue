@@ -24,7 +24,7 @@ watch(result, () => {
   if (data === undefined)
     return
 
-  const { comments: userCardComments, ...userCard } = result.value.userCard
+  const { comments: userCardComments, ...userCard } = result.value.card
   Object.assign(inCreationCard.value, userCard)
   Object.assign(comments.value, userCardComments)
 })
