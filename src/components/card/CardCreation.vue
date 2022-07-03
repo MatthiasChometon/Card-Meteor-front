@@ -23,6 +23,6 @@ defineEmits(['clickValidateCard'])
 }
 
 @media (max-width: $breakpoint-xs-max) {
-  .card-creation-form-container { min-width: 400px; }
+  .card-creation-form-container { min-width: 360px; }
 }
 </style>
