@@ -5,8 +5,8 @@ import { useVisitorLinks } from '~/stores/links/visitor'
 export function useLinks() {
   const userLinks = useUserLinks()
   const visitorLinks = useVisitorLinks()
-  const { isUser } = useUserRole()
-  const allLinks = computed(() => isUser.value ? visitorLinks.value.concat(userLinks.value) : visitorLinks.value)
+  const { isVisitor } = useUserRole()
+  const allLinks = computed(() => !isVisitor.value ? visitorLinks.value.concat(userLinks.value) : visitorLinks.value)
 
   return {
     userLinks,
