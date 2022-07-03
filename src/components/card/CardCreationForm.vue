@@ -7,7 +7,7 @@ const inCreationCard = useInCreationCard()
 <template>
   <div class="flex column no-wrap">
     <Title traduction-text="card.create.title" />
-    <q-form class="flex">
+    <q-form class="flex justify-center">
       <div>
         <q-input
           v-model="inCreationCard.name" class="q-pa-sm" outlined :label="t('card.create.name')"
