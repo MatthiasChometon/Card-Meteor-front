@@ -34,7 +34,7 @@ const coverPicture = computed(() => {
   return typeof picture === 'string' ? picture : ''
 })
 
-const { picture: pictureToDisplay } = useServerPicture('cards/cover', coverPicture.value)
+const { picture: pictureToDisplay } = useServerPicture('cards/cover', coverPicture)
 
 onCommendSend((result) => {
   sendNotification(result, { path: 'card.comment.onSendSuccess' }, { path: 'card.comment.onSendError' })
