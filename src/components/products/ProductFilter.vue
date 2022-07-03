@@ -6,7 +6,7 @@ const { connectedUser } = useConnectedUser()
 const { productListFilter } = useProductListFilter()
 const hasFilteredByUserProduct = computed(() => {
   const isFilterByEditor = productListFilter.filterBy.editor !== undefined
-  return connectedUser.role === UserRoles.user && isFilterByEditor
+  return connectedUser.role !== UserRoles.visitor && isFilterByEditor
 })
 </script>
 
@@ -22,7 +22,7 @@ const hasFilteredByUserProduct = computed(() => {
       style="flex: 1;  min-width: 280px;"
     />
     <UserProductFilter
-      v-if="connectedUser.role === UserRoles.user" class="q-pa-md"
+      v-if="connectedUser.role !== UserRoles.visitor" class="q-pa-md"
       style="flex: 0.6;  min-width: 280px;"
     />
   </q-card>
