@@ -9,6 +9,7 @@ export const CARDS_LIST_QUERY = gql`
       coverPicture
       price
       step
+      editor
     }
   }
 `

@@ -2,6 +2,7 @@
 import type { ProductForList } from '~/types/product/list/ProductForList'
 import { ProductStep } from '~/enums/products/filter/ProductStep'
 import { useUserRole } from '~/composables/useUserRole'
+import { useConnectedUser } from '~/stores/users/connected'
 
 const props = defineProps<{
   product: ProductForList
@@ -12,7 +13,8 @@ const emit = defineEmits(['add', 'remove', 'selectNumber'])
 const inStock = 10
 let numberSelected = $ref(props.product.number)
 const selectableNumbers = [...Array(inStock).keys()].reverse()
-const { isUser, isValidator } = useUserRole()
+const { isValidator } = useUserRole()
+const { connectedUser } = useConnectedUser()
 
 function add() {
   numberSelected++
@@ -38,13 +40,19 @@ function remove() {
         outlined :options="selectableNumbers" @update:model-value="$emit('selectNumber', numberSelected)"
       />
     </div>
-    <div style="flex: 1;" class="justify-end items-center flex">
+    <div style="flex: 1;" class="justify-end items-center flex no-wrap">
       <q-btn
-        v-if="product.step === ProductStep.released && !isValidator" outline class="text-primary text-weight-medium" icon="add"
-        round @click="add"
+        v-if="product.step === ProductStep.released && !isValidator" outline
+        class="text-primary text-weight-medium" icon="add" round @click="add"
       />
-      <ProductCardEditButton v-if="product.step === ProductStep.beingCreated && isUser" :product-id="props.product.id" />
-      <ProductCardCommentButton v-if="product.step === ProductStep.beingCreated && isValidator" :product-id="props.product.id" />
+      <ProductCardEditButton
+        v-if="product.step === ProductStep.beingCreated && product.editor === connectedUser.username" class="q-px-sm"
+        :product-id="props.product.id"
+      />
+      <ProductCardCommentButton
+        v-if="product.step === ProductStep.beingCreated && isValidator" class="q-px-sm"
+        :product-id="props.product.id"
+      />
     </div>
   </div>
 </template>

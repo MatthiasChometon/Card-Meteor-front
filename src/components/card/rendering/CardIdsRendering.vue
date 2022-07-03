@@ -6,8 +6,8 @@ import { useConnectedUser } from '~/stores/users/connected'
 const { t } = useI18n()
 const inCreationCard = useInCreationCard()
 const { connectedUser } = useConnectedUser()
-const isUser = computed(() => connectedUser.role === UserRoles.user)
-const editor = computed(() => isUser.value ? connectedUser.username : t('card.create.editorMessage'))
+const isVisitor = computed(() => connectedUser.role === UserRoles.visitor)
+const editor = computed(() => !isVisitor.value ? connectedUser.username : t('card.create.editorMessage'))
 </script>
 
 <template>
