@@ -7,7 +7,7 @@ import { useInCreationCard } from '~/stores/card/create'
 import { useHtmlToPicture } from '~/composables/useHtmlToPicture'
 import { useUserRole } from '~/composables/useUserRole'
 
-const { isVisitor, isUser } = useUserRole()
+const { isVisitor } = useUserRole()
 const { t } = useI18n()
 const $q = useQuasar()
 const { sendNotification } = useNotification()
@@ -25,7 +25,7 @@ function validateCard() {
     router.replace('/authentication/register')
   }
 
-  if (isUser.value)
+  if (!isVisitor.value)
     create()
 }
 
