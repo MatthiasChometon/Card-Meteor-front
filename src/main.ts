@@ -19,7 +19,6 @@ const cache = new InMemoryCache({
 const uri = `${import.meta.env.VITE_GRAPHQL_URL}/graphql`
 
 const link = createUploadLink({
-  credentials: 'include',
   uri,
 })
 
@@ -28,8 +27,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      'Access-Control-Allow-Credentials': true,
-      'authorization': token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : '',
     },
   }
 })
