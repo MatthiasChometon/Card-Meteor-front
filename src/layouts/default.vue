@@ -11,6 +11,10 @@
 </template>
 
 <style lang="scss">
+.q-footer {
+  z-index: 10 !important;
+}
+
 .q-page-container {
   width: 100%;
 }
