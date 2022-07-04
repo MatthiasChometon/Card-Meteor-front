@@ -69,8 +69,6 @@ declare module '@vue/runtime-core' {
     ProductTypeOrder: typeof import('./components/products/orderBy/ProductTypeOrder.vue')['default']
     RegisterForm: typeof import('./components/authentication/register/RegisterForm.vue')['default']
     RegisterLink: typeof import('./components/authentication/register/RegisterLink.vue')['default']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
     ShoppingButton: typeof import('./components/layout/ShoppingButton.vue')['default']
     ShoppingDetails: typeof import('./components/shopping/ShoppingDetails.vue')['default']
     ShoppingPayment: typeof import('./components/shopping/ShoppingPayment.vue')['default']
