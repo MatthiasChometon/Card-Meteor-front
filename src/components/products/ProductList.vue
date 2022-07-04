@@ -23,6 +23,10 @@ defineEmits(['add', 'remove', 'selectNumber'])
 </template>
 
 <style lang="scss">
+.product-card {
+  flex-wrap: nowrap;
+}
+
 @media (min-width: $breakpoint-lg-min) {
   .product-card {
     width: 20%;
