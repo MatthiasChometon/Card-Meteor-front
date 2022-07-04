@@ -90,6 +90,9 @@ export default defineConfig({
         name: 'Meteor Card',
         short_name: 'Meteor Card',
         theme_color: '#ffffff',
+        start_url: 'index.html',
+        display: 'standalone',
+        background_color: '#000000',
         icons: [
           {
             src: '/pwa-192x192.png',
