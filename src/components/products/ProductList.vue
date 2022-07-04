@@ -29,19 +29,19 @@ defineEmits(['add', 'remove', 'selectNumber'])
 
 @media (min-width: $breakpoint-lg-min) {
   .product-card {
-    width: 20%;
+    width: 15%;
   }
 }
 
 @media (max-width: $breakpoint-md-max) {
   .product-card {
-    width: 30%;
+    width: 20%;
   }
 }
 
 @media (max-width: $breakpoint-sm-max) {
   .product-card {
-    width: 44%;
+    width: 30%;
   }
 }
 
