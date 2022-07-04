@@ -32,6 +32,8 @@ declare module '@vue/runtime-core' {
     CardTypeInput: typeof import('./components/card/forms/CardTypeInput.vue')['default']
     CloseDrawer: typeof import('./components/layout/CloseDrawer.vue')['default']
     DesktopNavbar: typeof import('./components/layout/DesktopNavbar.vue')['default']
+    DownloadAppButton: typeof import('./components/layout/DownloadAppButton.vue')['default']
+    DownloadAppTextButton: typeof import('./components/layout/DownloadAppTextButton.vue')['default']
     EmailInput: typeof import('./components/forms/EmailInput.vue')['default']
     Footer: typeof import('./components/layout/Footer.vue')['default']
     HomePresentation: typeof import('./components/home/HomePresentation.vue')['default']
