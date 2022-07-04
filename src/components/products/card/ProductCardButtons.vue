@@ -27,7 +27,7 @@ function remove() {
 </script>
 
 <template>
-  <div class="flex row no-wrap q-px-md q-pt-md">
+  <div class="flex row no-wrap q-pt-md">
     <div style="flex: 1;" class="justify-start items-center flex">
       <q-btn
         v-if="isShoppingList" outline class="text-primary text-weight-medium" icon="remove" round
