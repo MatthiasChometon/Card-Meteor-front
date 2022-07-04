@@ -85,7 +85,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-pwa
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+      includeAssets: ['favicon.png', 'safari-pinned-tab.png'],
       manifest: {
         name: 'Meteor Card',
         short_name: 'Meteor Card',
