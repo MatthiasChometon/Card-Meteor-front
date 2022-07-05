@@ -42,7 +42,7 @@ function remove() {
     </div>
     <div style="flex: 1;" class="justify-end items-center flex no-wrap">
       <q-btn
-        v-if="product.step === ProductStep.released && !isValidator" outline
+        v-if="product.step === ProductStep.released" outline
         class="text-primary text-weight-medium" icon="add" round @click="add"
       />
       <ProductCardEditButton
