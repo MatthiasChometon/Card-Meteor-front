@@ -5,10 +5,6 @@ const emit = defineEmits(['validate', 'sendComment'])
 const newComment = ref('')
 const isCardValidated = ref(false)
 
-const isValidatedTranslation = computed(() => {
-  const isValidatedKey = isCardValidated.value ? 'validated' : 'notValidated'
-  return t(`card.comment.form.${isValidatedKey}`)
-})
 const buttonText = computed(() => {
   const isValidatedKey = isCardValidated.value ? 'validate' : 'sendComment'
   return t(`card.comment.form.${isValidatedKey}`)
@@ -24,7 +20,7 @@ function click() {
   <div class="flex justify-center content-center q-pb-md">
     <q-checkbox v-model="isCardValidated" color="primary" />
     <div class="flex justify-center content-center">
-      {{ isValidatedTranslation }}
+      {{ t('card.comment.form.validated') }}
     </div>
   </div>
   <q-input
