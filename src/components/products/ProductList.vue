@@ -17,7 +17,7 @@ defineEmits(['add', 'remove', 'selectNumber'])
       @select-number="(selectedNumber) => $emit('selectNumber', { selectedNumber, product })"
     />
   </div>
-  <div v-if="!isShoppingList" class="flex full-width justify-center q-mt-md">
+  <div v-if="!isShoppingList" class="flex full-width justify-center q-my-md">
     <ProductPagination />
   </div>
 </template>
