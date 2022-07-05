@@ -12,9 +12,9 @@ const { picture } = useServerPicture('cards/cover', props.product.coverPicture)
 </script>
 
 <template>
-  <q-card class="q-ma-md flex justify-center content-center column alig">
+  <q-card class="q-ma-md flex justify-center content-center column">
     <ProductCardPicture :picture="picture" />
-    <q-card-section class="flex column justify-between">
+    <q-card-section class="flex column justify-between no-wrap" style="flex: 1;">
       <ProductCardDescription :product="product" />
       <ProductCardButtons
         :product="product" :is-shopping-list="isShoppingList"
