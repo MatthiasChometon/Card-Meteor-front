@@ -120,7 +120,6 @@ card:
     empty: you have not propose this card yet
     form:
       title: validation
-      notValidated: i do not validate this card yet
       validated: i validate this card
       sendComment: send comment
       validate: validate card

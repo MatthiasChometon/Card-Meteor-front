@@ -120,7 +120,6 @@ card:
     empty: vous n'avez pas encore proposé cette carte
     form:
       title: validation
-      notValidated: je ne valide pas encore cette carte
       validated: je valide cette carte
       sendComment: envoyer le commentaire
       validate: valider la carte
