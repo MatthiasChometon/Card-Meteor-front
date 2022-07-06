@@ -5,14 +5,14 @@ export const useProductPagination = defineStore('pagination', () => {
   const paginationParam: PaginationParam = $ref({
     currentPage: 1,
     start: 0,
-    end: 5,
+    end: 6,
     maxProductsPerPage: 6,
   })
 
   function setPagination(currentPage: number): void {
     const { maxProductsPerPage } = paginationParam
-    paginationParam.start = (currentPage - 1) * maxProductsPerPage
-    paginationParam.end = currentPage * maxProductsPerPage - 1
+    paginationParam.start = paginationParam.end + 1
+    paginationParam.end = currentPage * maxProductsPerPage
     paginationParam.currentPage = currentPage
   }
 
