@@ -11,7 +11,7 @@ export const useProductPagination = defineStore('pagination', () => {
 
   function setPagination(currentPage: number): void {
     const { maxProductsPerPage } = paginationParam
-    paginationParam.start = paginationParam.end + 1
+    paginationParam.start = currentPage * (maxProductsPerPage - 1)
     paginationParam.end = currentPage * maxProductsPerPage
     paginationParam.currentPage = currentPage
   }
