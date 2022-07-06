@@ -65,7 +65,7 @@ form:
     repeatedPasswordNotValid: les mots de passes ne correspondent pas
     emailNotValid: cet email n'est pas valide
 order:
-  onCreationSuccess: ta commande %{trackingNumber} a été crée
+  onCreationSuccess: ta commande %{trackingNumber} a été créée
   onCreationError: erreur lors de la création de ta commande
 card:
   onUpdateSuccess: ta carte a bien été mise à jour. Elle sera publié une fois que nous l'aurons validée
@@ -112,7 +112,7 @@ card:
     limitation: limitation
     serialNumber: numéro de série
     edition: édition
-    editorMessage: connectes toi pour voir ton pseudo ici
+    editorMessage: connecte toi pour voir ton pseudo ici
     button: proposer ma carte
     notConnected: il ne te reste plus qu'à t'authentifier
   comment:
@@ -130,7 +130,7 @@ card:
     onSendError: erreur lors de l'envoi du commentaire
 not-found: Page non trouvée
 homepage:
-  presentation: Meteor Card est un jeu de carte créé par la communauté. Tu peux créer et jouer tes propres cartes.
+  presentation: Meteor Card est un jeu de cartes créé par la communauté. Tu peux créer et jouer tes propres cartes.
   createButton: créer ma carte
 button:
   productList: les produits
